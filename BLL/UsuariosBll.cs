@@ -11,13 +11,13 @@ namespace BLL
 {
     public class UsuariosBll
     {
-       public static bool Guardar(Usuarios usuarios)
+        public static bool Guardar(Usuarios usuarios)
         {
             using (var reposi = new Repositorio<Usuarios>())
             {
                 try
                 {
-                    if(Buscar(u => u.IdUsuarios == usuarios.IdUsuarios) == null)
+                    if (Buscar(u => u.IdUsuarios == usuarios.IdUsuarios) == null)
                     {
                         return reposi.Guardar(usuarios);
                     }
@@ -92,6 +92,40 @@ namespace BLL
                 }
                 catch { }
                 return Result;
+            }
+        }
+
+        public static List<Usuarios> GetListaNombre(string tmp)
+        {
+            List<Usuarios> retorno = null;
+            SistemaVentasDb db = new SistemaVentasDb();
+            {
+                try
+                {
+                    retorno = db.Usuarios.Where(p => p.NombresUsuarios == tmp).ToList();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                return retorno;
+            }
+
+        }
+        public static List<Usuarios> GetContrasena(string tmp)
+        {
+            List<Usuarios> retorno = null;
+            SistemaVentasDb db = new SistemaVentasDb();
+            {
+                try
+                {
+                    retorno = db.Usuarios.Where(p => p.Contrasena == tmp).ToList();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                return retorno;
             }
         }
     }

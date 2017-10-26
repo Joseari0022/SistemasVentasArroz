@@ -18,49 +18,48 @@
 </head>
 <body>
     <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Sistema Ventas Gonzalez</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Inicio</a></li>
-                    <!--usuarios-->
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Registro</a></li>
-                            <li><a href="#">Consulta</a></li>
-
-                        </ul>
-                    </li>
-                    <!--Productos-->
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Productos<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Registro</a></li>
-                            <li><a href="#">Consulta</a></li>
-
-                        </ul>
-                    </li>               
-                <!--Factura-->
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Factura<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Registro</a></li>
-                            <li><a href="#">Consulta</a></li>
-
-                        </ul>
-                    </li>              
-                        <li><a href="#">Contactar &nbsp</a></li>
-                        <li><a id="Btn" href="#">LogIn &nbsp</a></li>
-                        <li><a href="#">Cerrar Sesion</a></li>
-
-                   </ul>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Sistema Ventas Gonzalez</a>
             </div>
-        </nav>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Inicio</a></li>
+                <!--usuarios-->
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="UI/Registros/UsuariosWebForm.aspx">Registro</a></li>
+                        <li><a href="#">Consulta</a></li>
+
+                    </ul>
+                </li>
+                <!--Productos-->
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Productos<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Registro</a></li>
+                        <li><a href="#">Consulta</a></li>
+
+                    </ul>
+                </li>
+                <!--Factura-->
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Factura<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Registro</a></li>
+                        <li><a href="#">Consulta</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Contactar &nbsp</a></li>
+                <li><a href="#">Cerrar Sesion</a></li>
+
+            </ul>
+        </div>
+    </nav>
 
 
 
     <!------------------------------------------------------------Modal de Inicio de Sesion------------------------------------------>
 
-    <div class="container">
+    <%--<div class="container">
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -69,8 +68,8 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
-                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 ><span class="glyphicon glyphicon-lock"></span>Login</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-lock"></span>Login</h4>
                     </div>
                     <div class="modal-body">
                         <form role="form">
@@ -87,13 +86,11 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        
-
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 
 
 
@@ -107,10 +104,10 @@
     <br />
 
     <form id="form1" runat="server">
-        <div>           
+        <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-            
+
         </div>
     </form>
 
