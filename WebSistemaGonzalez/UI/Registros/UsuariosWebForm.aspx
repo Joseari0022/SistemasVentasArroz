@@ -5,14 +5,14 @@
         .auto-style1 {
             text-align: center;
         }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Bootstrap Example</title>
+        <title>Registro Usuario</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -25,17 +25,16 @@
             
             <div class="text-center">
                 <div>
-                    <label for="id cliente">Id Cliente</label>
+                    <label for="id Usuario">Id Usuario</label>
                 </div>
             </div>
-            <%-- Id Usuario --%>
+            <%-- Fecha --%>
             <div class="text-center">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="idClienteTextbox" runat="server" Width="190px" Height="33px" OnTextChanged="idClienteTextbox_TextChanged"></asp:TextBox>
-                <asp:Button ID="Button4" runat="server" Text="Button" type="Button4" class="btn btn-Button4"/>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="֎" ValidationGroup="buscar" ControlToValidate="idClienteTextbox" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:TextBox ID="idUsuarioTextbox" runat="server"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="BuscarButton" runat="server" Text="Buscar" type="Button4" class="btn btn-Button4" Width="88px" OnClick="BuscarButton_Click"/>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="֎" ValidationGroup="buscar" ControlToValidate="idUsuarioTextbox" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
-            <%-- Nombres Usuario --%>
+            <%-- Fecha --%>
             <div class="text-center">
                 <div>
                     <label for="Nombres Usuario">Nombres Usuario</label>
@@ -45,17 +44,17 @@
                 <asp:TextBox ID="NombreUsuarioTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="֎" ValidationGroup="buscar" ControlToValidate="NombreUsuarioTextBox" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
-            <%-- Nombres --%>
+            <%-- Fecha --%>
             <div class="text-center">
                 <div>
                     <label for="Nombres">Nombres</label>
                 </div>
             </div>
             <div class="text-center">
-                <asp:TextBox ID="TextBox1" runat="server" Width="190px" Height="33px"></asp:TextBox>
+                <asp:TextBox ID="NombresTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="֎" ValidationGroup="buscar" ControlToValidate="NombreUsuarioTextBox" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
-            <%-- Contraseña --%>
+            <%-- Fecha --%>
             <div class="text-center">
                 <div>
                     <label for="Contraseña">Contraseña</label>
@@ -82,9 +81,9 @@
             <div class="text-center">
 
                 
-                <asp:Button ID="Button1" runat="server" Text="Button1" type="Button1" class="btn btn-Button1" /> 
-                <asp:Button ID="Button2" runat="server" Text="Button" type="Button2" class="btn btn-Button2" />
-                <asp:Button ID="Button3" runat="server" Text="Button" type="Button3" class="btn btn-Button3" />
+                <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" type="Button1" class="btn btn-Button1" OnClick="NuevoButton_Click" Width="88px" /> 
+                <asp:Button ID="GuardarButton" runat="server" Text="Guardar" type="Button2" class="btn btn-Button2" Width="88px" OnClick="GuardarButton_Click" />
+                <asp:Button ID="EliminarButton" runat="server" Text="Eliminar'" type="Button3" class="btn btn-Button3" Width="88px" OnClick="EliminarButton_Click" />
 
                 
     </body>

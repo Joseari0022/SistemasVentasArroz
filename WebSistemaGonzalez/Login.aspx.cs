@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
+using System.Data;
+
 
 namespace WebSistemaGonzalez
 {
@@ -19,16 +21,16 @@ namespace WebSistemaGonzalez
         {
             if (UsuariosBll.GetListaNombre(NombreTextBox.Text).Count() == 0)
             {
-              //  Label1.Text = "Usuario No Registrado";
+                Utilidades.ShowToastr(this, "Por Favor", " llenar Nombre", "warning");
                 return false;
             }
             return true;
         }
         public bool ValidarContrasena()
         {
-         //   if (UsuarioBLL.GetContrasena(ClaveTextBox.Text).Count() == 0)
+            if (UsuariosBll.GetContrasena(ContrasenaTextBox.Text).Count() == 0)
             {
-               /// Label1.Text = "Contrasena Invalida";
+                Utilidades.ShowToastr(this, "Por Favor", " llenar Contraseña", "warning");
                 return false;
             }
             return true;
@@ -36,7 +38,16 @@ namespace WebSistemaGonzalez
 
         protected void ButtonLogin_Click(object sender, EventArgs e)
         {
-         
+            if (ValidarUsuario() && ValidarContrasena() == true)
+            {
+
+                Response.Redirect("Default.aspx");
+                Utilidades.ShowToastr(this, "Muy bien sicario", "Correcto", "Success");
+            }
+            else
+            {
+                Utilidades.ShowToastr(this, "Muy bien sicario", "Correcto", "Success");
+            }
         }
     }
 }
