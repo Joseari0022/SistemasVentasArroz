@@ -9,9 +9,11 @@
     <!---------------------------------------------Bootstrap-------------------------------------------------------->
     <link rel="stylesheet" href="Content/bootstrap.min.css" />
     <link rel="stylesheet" href="Content/bootstrap.min.js" />
+    
 
     <!--------------------------------------------Tema-------------------------------------------------------------->
     <link rel="stylesheet" href="Content/bootstrapTheme.min.css" />
+    
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -23,17 +25,19 @@
                 <a class="navbar-brand" href="#">Sistema Ventas Gonzalez</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Inicio</a></li>
+                <li class="active"><a href="Default.aspx">Inicio</a></li>
                 <!--usuarios-->
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios <span class="caret"></span></a>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="UI/Registros/UsuariosWebForm.aspx">Registro</a></li>
-                        <li><a href="#">Consulta</a></li>
+                        <li><a href="UI/Consultas/ConsultaUsuariosWebFormaspx.aspx">Consulta</a></li>
 
                     </ul>
                 </li>
                 <!--Productos-->
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Productos<span class="caret"></span></a>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Productos<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="UI/Registros/ProductosWebForm.aspx">Registro</a></li>
                         <li><a href="#">Consulta</a></li>
@@ -41,7 +45,8 @@
                     </ul>
                 </li>
                 <!--Factura-->
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Factura<span class="caret"></span></a>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Factura<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="UI/Registros/FacturaWebForm.aspx">Registro</a></li>
                         <li><a href="#">Consulta</a></li>

@@ -13,13 +13,16 @@ namespace WebSistemaGonzalez.UI.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.FechaTextBox.Text = string.Format("{0:G}", DateTime.Now);
-            ScriptResourceDefinition myScriptResDef = new ScriptResourceDefinition();
-            myScriptResDef.Path = "~/Scripts/jquery-1.4.2.min.js";
-            myScriptResDef.DebugPath = "~/Scripts/jquery-1.4.2.js";
-            myScriptResDef.CdnPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js";
-            myScriptResDef.CdnDebugPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.js";
-            ScriptManager.ScriptResourceMapping.AddDefinition("jquery", null, myScriptResDef);
+            if (!IsPostBack)
+            {
+                this.FechaTextBox.Text = string.Format("{0:G}", DateTime.Now);
+                ScriptResourceDefinition myScriptResDef = new ScriptResourceDefinition();
+                myScriptResDef.Path = "~/Scripts/jquery-1.4.2.min.js";
+                myScriptResDef.DebugPath = "~/Scripts/jquery-1.4.2.js";
+                myScriptResDef.CdnPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js";
+                myScriptResDef.CdnDebugPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.js";
+                ScriptManager.ScriptResourceMapping.AddDefinition("jquery", null, myScriptResDef);
+            }
         }
 
         protected void BuscarButton_Click(object sender, EventArgs e)

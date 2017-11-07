@@ -19,6 +19,8 @@ namespace WebSistemaGonzalez.UI.Registros
             myScriptResDef.DebugPath = "~/Scripts/jquery-1.4.2.js";
             myScriptResDef.CdnPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js";
             myScriptResDef.CdnDebugPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.js";
+            myScriptResDef.CdnDebugPath = "~/Content/toastr.css";
+            myScriptResDef.CdnDebugPath = "~/Content/toastr.min.css";
             ScriptManager.ScriptResourceMapping.AddDefinition("jquery", null, myScriptResDef);
         }
 
