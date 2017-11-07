@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{F7B97DA4-686E-489B-B340-E3DF3A50A6AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemasGonzalez", "SistemasGonzalez\SistemasGonzalez.csproj", "{9CC0F8E8-B152-4FF7-8F0A-34981C75C14E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSistemaGonzalez", "WebSistemaGonzalez\WebSistemaGonzalez.csproj", "{25D4A9A5-D8DD-4698-B454-27065C274E64}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{F7B97DA4-686E-489B-B340-E3DF3A50A6AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7B97DA4-686E-489B-B340-E3DF3A50A6AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7B97DA4-686E-489B-B340-E3DF3A50A6AC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CC0F8E8-B152-4FF7-8F0A-34981C75C14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CC0F8E8-B152-4FF7-8F0A-34981C75C14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CC0F8E8-B152-4FF7-8F0A-34981C75C14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CC0F8E8-B152-4FF7-8F0A-34981C75C14E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{25D4A9A5-D8DD-4698-B454-27065C274E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{25D4A9A5-D8DD-4698-B454-27065C274E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25D4A9A5-D8DD-4698-B454-27065C274E64}.Release|Any CPU.ActiveCfg = Release|Any CPU

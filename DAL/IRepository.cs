@@ -10,6 +10,7 @@ namespace DAL
     public interface IRepository<TEntity> : IDisposable where TEntity : class 
     {
         TEntity Guardar(TEntity Entidad);
+       
         bool Modificar(TEntity Entidad);
         bool Eliminar(TEntity Entidad);
 

@@ -14,21 +14,29 @@ namespace Entidades
         public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
         public decimal Precio { get; set; }
-       public DateTime FechaCreacion { get; set; }
-        
+        public DateTime FechaCreacion { get; set; }
 
+        //public List<Facturas> Detalle;
+        //public void AgregarProductos(string Descripcion, decimal Cantidad, decimal Precio)
+        //{
+        //    this.Detalle.Add(new Facturas(Descripcion, Cantidad, Precio));
+        //}
+
+        public virtual List<Facturas> Factura { get; set;}
         public Productos()
         {
-
+            this.Factura = new List<Facturas>();
         }
 
-        public Productos(int idproducto, string descripcion, decimal cantidad, decimal precio, DateTime fechacreacion)
+        public Productos(int idproductos, string descripcion, decimal cantidad, decimal precio)
         {
-            this.IdProductos = idproducto;
+            this.IdProductos = idproductos;
             this.Descripcion = descripcion;
             this.Cantidad = cantidad;
             this.Precio = precio;
-            this.FechaCreacion = fechacreacion;
+            this.Factura = new List<Facturas>();
         }
     }
+
+    
 }

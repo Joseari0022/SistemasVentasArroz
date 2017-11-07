@@ -22,19 +22,19 @@
 
         <div class="container">
             <h2 class="auto-style1">Registro Usuarios</h2>
-            
+
+            <%-- nombre usuario --%>
             <div class="text-center">
                 <div>
                     <label for="id Usuario">Id Usuario</label>
                 </div>
             </div>
-            <%-- Fecha --%>
             <div class="text-center">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:TextBox ID="idUsuarioTextbox" runat="server"></asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="BuscarButton" runat="server" Text="Buscar" type="Button4" class="btn btn-Button4" Width="88px" OnClick="BuscarButton_Click"/>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="֎" ValidationGroup="buscar" ControlToValidate="idUsuarioTextbox" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:TextBox ID="idUsuarioTextbox" runat="server" Width="190px" Height="33px"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="BuscarButton" runat="server" Text="Buscar" type="Button4" class="btn btn-Button4" Width="88px" OnClick="BuscarButton_Click"/>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="idUsuarioTextbox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
             </div>
-            <%-- Fecha --%>
+            <%-- nombre --%>
             <div class="text-center">
                 <div>
                     <label for="Nombres Usuario">Nombres Usuario</label>
@@ -42,9 +42,9 @@
             </div>
             <div class="text-center">
                 <asp:TextBox ID="NombreUsuarioTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="֎" ValidationGroup="buscar" ControlToValidate="NombreUsuarioTextBox" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="NombreUsuarioTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
             </div>
-            <%-- Fecha --%>
+            <%-- contraseña --%>
             <div class="text-center">
                 <div>
                     <label for="Nombres">Nombres</label>
@@ -52,7 +52,7 @@
             </div>
             <div class="text-center">
                 <asp:TextBox ID="NombresTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="֎" ValidationGroup="buscar" ControlToValidate="NombreUsuarioTextBox" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="NombreUsuarioTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
             </div>
             <%-- Fecha --%>
             <div class="text-center">
@@ -62,7 +62,7 @@
             </div>
             <div class="text-center">
                 <asp:TextBox ID="ContraseñaTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="֎" ValidationGroup="buscar" ControlToValidate="ContraseñaTextBox" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="ContraseñaTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
             </div>
             <%-- Fecha --%>
             <div class="text-center">
@@ -72,7 +72,7 @@
             </div>
             <div class="text-center">
                 <asp:TextBox ID="FechaTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="֎" ValidationGroup="buscar" ControlToValidate="FechaTextBox" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="FechaTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
             </div>
             <br />
 

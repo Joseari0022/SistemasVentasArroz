@@ -179,7 +179,7 @@ namespace SistemasGonzalez.UI.Registros
             row.Cells[1].Value = producto.Precio;
             row.Cells[3].Value = Convert.ToDouble(row.Cells[2].Value) * Convert.ToDouble(row.Cells[1].Value);
             FacturadataGridView.Rows.Add(row);
-           // CalcularTotal();
+            CalcularTotal();
             ProductoIdtextBox.Clear();
             DescripciontextBox.Clear();
             PreciotextBox.Clear();

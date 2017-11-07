@@ -16,9 +16,6 @@ namespace Entidades
         public string Contrasena { get; set; }
         public DateTime Fecha { get; set; }
 
-        public static object ObtenerDatos(string v)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

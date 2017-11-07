@@ -48,12 +48,14 @@ namespace WebSistemaGonzalez.UI.Registros
                 {
                     ProductosBll.Modificar(productos);
                     //Utilidades.ShowToastr(this, "El Usuario", " Se Modifico Correctamente", "Success");
+                    Limpiar();
                 }
                 else
                 {
                     productos = Llenar();
                     ProductosBll.Guardar(productos);
-                   // Utilidades.ShowToastr(this, "El Usuario", " Se Guardo Correctamente", "Success");
+                    // Utilidades.ShowToastr(this, "El Usuario", " Se Guardo Correctamente", "Success");
+                    Limpiar();
 
                 }
             }
@@ -68,6 +70,39 @@ namespace WebSistemaGonzalez.UI.Registros
             productos.FechaCreacion = Convert.ToDateTime(FechaTextBox.Text);
 
             return productos;
+        }
+
+        protected void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Limpiar()
+        {
+            IdProductoTextBox.Text = " ";
+            DescripcionTextBox.Text = " ";
+            CantidadTextBox.Text = " ";
+            PrecioTextBox.Text = " ";
+            
+        }
+
+        protected void EliminarButton_Click(object sender, EventArgs e)
+        {
+            int id = Utilidades.ToInt(IdProductoTextBox.Text);
+            Productos producto = ProductosBll.Buscar(p => p.IdProductos == id);
+            if (producto != null)
+            {
+                if (producto.IdProductos != 1)
+                {
+                    ProductosBll.Eliminar(producto);
+                    Utilidades.ShowToastr(this, "El Usuario", " Se Elimino Correctamente", "Success");
+                    Limpiar();
+                }
+                else
+                {
+                    Utilidades.ShowToastr(this, "El Usuario", "No Se Elimino", "warning");
+                }
+            }
         }
     }
 }

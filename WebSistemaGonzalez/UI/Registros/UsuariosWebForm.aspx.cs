@@ -72,6 +72,7 @@ namespace WebSistemaGonzalez.UI.Registros
                     usuario = Llenar();
                     UsuariosBll.Guardar(usuario);
                     Utilidades.ShowToastr(this, "El Usuario", " Se Guardo Correctamente", "Success");
+                    Limpiar();
 
                 }
             }

@@ -6,32 +6,72 @@ using System.Threading.Tasks;
 using DAL;
 using Entidades;
 using System.Linq.Expressions;
+using System.Data.Entity;
 
 namespace BLL
 {
     public class FacturaBll
     {
-        public static bool Guardar(Facturas factura)
+        //public static bool Guardar(Facturas factura)
+        //{
+        //    using (var reposi = new Repositorio<Facturas>())
+        //    {
+        //        try
+        //        {
+        //            if (Buscar(f => f.IdFactura == factura.IdFactura) == null)
+        //            {
+        //                return reposi.Guardar(factura);
+        //            }
+        //            else
+        //            {
+        //                return reposi.Modificar(factura);
+        //            }
+        //        }
+        //        catch (Exception)
+        //        {
+        //            throw;
+        //        }
+        //    }
+        //}
+
+        public static bool Guardar(Facturas gr)
         {
-            using (var reposi = new Repositorio<Facturas>())
+            bool re = false;
+            try
             {
-                try
+                var db = new SistemaVentasDb();
+
+                db.Factura.Add(gr);
+                var gp = db.Factura.Add(gr);
+                foreach (var estud in gr.producto)
                 {
-                    if (Buscar(f => f.IdFactura == factura.IdFactura) == null)
-                    {
-                        return reposi.Guardar(factura);
-                    }
-                    else
-                    {
-                        return reposi.Modificar(factura);
-                    }
+                    db.Entry(estud).State = EntityState.Unchanged;
                 }
-                catch (Exception)
-                {
-                    throw;
-                }
+                db.SaveChanges();
+                db.Dispose();
+                re = true;
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return re;
         }
+
+        //public static void Insertar(Facturas f)
+        //{
+        //    try
+        //    {
+        //        SistemaVentasDb db = new SistemaVentasDb();
+        //        db.Factura.Add(f);
+        //        db.SaveChanges();
+        //        db.Dispose();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
         public static bool Modificar(Facturas factura)
         {
@@ -54,14 +94,13 @@ namespace BLL
             return eliminado;
         }
 
-        public static Facturas Buscar(Expression<Func<Facturas, bool>> Busqueda)
+        public static Facturas Buscar(Expression<Func<Facturas, bool>> criterioBusqueda)
         {
-            Facturas Result = null;
-            using (var repoitorio = new Repositorio<Facturas>())
+
+            using (var repositorio = new DAL.Repositorio<Facturas>())
             {
-                Result = repoitorio.Buscar(Busqueda);
+                return repositorio.Buscar(criterioBusqueda);
             }
-            return Result;
         }
 
         public static List<Facturas> Listar(Expression<Func<Facturas, bool>> busqueda)

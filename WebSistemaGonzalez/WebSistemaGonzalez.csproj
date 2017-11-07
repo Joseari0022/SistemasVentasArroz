@@ -67,7 +67,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SistemaVentaDb.mdf" />
+    <Content Include="App_Data\SistemaVentaDb_log.ldf">
+      <DependentUpon>SistemaVentaDb.mdf</DependentUpon>
+    </Content>
     <Content Include="Base.Master" />
+    <Content Include="Content\Datagrid.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
     <Content Include="Content\toastr.scss" />
@@ -98,8 +103,13 @@
     <Content Include="Scripts\jquery-1.6.3.min.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
-    <Content Include="SistemaVentaDb.mdf" />
-    <Content Include="UI\Registros\FacturaWebForm.aspx" />
+    <Content Include="SistemaVentasDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\Consultas\ConsultaFacturasWebForm.aspx" />
+    <Content Include="UI\Consultas\ConsultaProductosWebForm.aspx" />
+    <Content Include="UI\Consultas\ConsultaUsuariosWebFormaspx.aspx" />
+    <Content Include="UI\Registros\FacturasWebForm.aspx.aspx" />
     <Content Include="UI\Registros\ProductosWebForm.aspx" />
     <Content Include="UI\Registros\UsuariosWebForm.aspx" />
     <Content Include="Web.config">
@@ -137,12 +147,33 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\FacturaWebForm.aspx.cs">
-      <DependentUpon>FacturaWebForm.aspx</DependentUpon>
+    <Compile Include="UI\Consultas\ConsultaFacturasWebForm.aspx.cs">
+      <DependentUpon>ConsultaFacturasWebForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI\Registros\FacturaWebForm.aspx.designer.cs">
-      <DependentUpon>FacturaWebForm.aspx</DependentUpon>
+    <Compile Include="UI\Consultas\ConsultaFacturasWebForm.aspx.designer.cs">
+      <DependentUpon>ConsultaFacturasWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaProductosWebForm.aspx.cs">
+      <DependentUpon>ConsultaProductosWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaProductosWebForm.aspx.designer.cs">
+      <DependentUpon>ConsultaProductosWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaUsuariosWebFormaspx.aspx.cs">
+      <DependentUpon>ConsultaUsuariosWebFormaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaUsuariosWebFormaspx.aspx.designer.cs">
+      <DependentUpon>ConsultaUsuariosWebFormaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\FacturasWebForm.aspx.aspx.cs">
+      <DependentUpon>FacturasWebForm.aspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\FacturasWebForm.aspx.aspx.designer.cs">
+      <DependentUpon>FacturasWebForm.aspx.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\ProductosWebForm.aspx.cs">
       <DependentUpon>ProductosWebForm.aspx</DependentUpon>
@@ -161,7 +192,6 @@
     <Compile Include="Utilidades.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\IMG\" />
     <Folder Include="Models\" />
   </ItemGroup>

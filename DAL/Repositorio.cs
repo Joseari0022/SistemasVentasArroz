@@ -96,7 +96,7 @@ namespace DAL
             {
                 Resultado = EntitySet.Where(Busqueda).ToList();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
@@ -112,7 +112,7 @@ namespace DAL
                 {
                     return EntitySet.ToList();
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     throw;
                 }
@@ -130,5 +130,6 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+
     }
 }
