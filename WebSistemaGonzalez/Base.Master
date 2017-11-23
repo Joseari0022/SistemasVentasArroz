@@ -7,13 +7,14 @@
     <title></title>
 
     <!---------------------------------------------Bootstrap-------------------------------------------------------->
-    <link rel="stylesheet" href="Content/bootstrap.min.css" />
-    <link rel="stylesheet" href="Content/bootstrap.min.js" />
-    
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <script src="Css/bootstrap.min.js"></script>
 
     <!--------------------------------------------Tema-------------------------------------------------------------->
-    <link rel="stylesheet" href="Content/bootstrapTheme.min.css" />
+    <link rel="stylesheet" href="Css/bootstrapTheme.min.css" />
     
+    <script src="Scripts/jquery-3.2.1.min.js"></script>
+    <script src="Scripts/toastr.min.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -23,6 +24,7 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Sistema Ventas Gonzalez</a>
+
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="Default.aspx">Inicio</a></li>
@@ -113,6 +115,14 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
 
+            <div class="contact section" id="section-5">
+                <div class="container">
+                </div>
+                <asp:ScriptManager ID="ScriptManager" runat="server">
+                </asp:ScriptManager>
+            </div>
+            <script src="Scripts/jquery.nav.js"></script>
+
         </div>
     </form>
 
@@ -123,13 +133,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script>
+    <%--<script>
         $(document).ready(function () {
             $("#Btn").click(function () {
                 $("#myModal").modal();
             });
         });
 
-    </script>
+    </script>--%>
 </body>
 </html>

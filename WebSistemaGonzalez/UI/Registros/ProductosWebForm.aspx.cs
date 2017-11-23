@@ -22,6 +22,7 @@ namespace WebSistemaGonzalez.UI.Registros
                 myScriptResDef.CdnPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js";
                 myScriptResDef.CdnDebugPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.js";
                 ScriptManager.ScriptResourceMapping.AddDefinition("jquery", null, myScriptResDef);
+                FechaTextBox.Enabled = false;
             }
         }
 

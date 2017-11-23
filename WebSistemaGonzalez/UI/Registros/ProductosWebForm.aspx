@@ -86,5 +86,5 @@
                     <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" class="btn btn-Button4" OnClick="EliminarButton_Click" />
 
 
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </asp:Content>

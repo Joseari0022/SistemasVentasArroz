@@ -11,6 +11,7 @@ namespace WebSistemaGonzalez.UI.Registros
 {
     public partial class UsuariosWebForm : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             this.FechaTextBox.Text = string.Format("{0:G}", DateTime.Now);
@@ -22,6 +23,7 @@ namespace WebSistemaGonzalez.UI.Registros
             myScriptResDef.CdnDebugPath = "~/Content/toastr.css";
             myScriptResDef.CdnDebugPath = "~/Content/toastr.min.css";
             ScriptManager.ScriptResourceMapping.AddDefinition("jquery", null, myScriptResDef);
+            FechaTextBox.Enabled = false;
         }
 
         protected void NuevoButton_Click(object sender, EventArgs e)

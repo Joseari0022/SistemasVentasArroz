@@ -66,32 +66,38 @@ namespace BLL
 
         public static List<Usuarios> Listar(Expression<Func<Usuarios, bool>> busqueda)
         {
-            List<Usuarios> Result = null;
-            using (var repoitorio = new Repositorio<Usuarios>())
+            List<Usuarios> retorno = null;
+            using (var conn = new Repositorio<Usuarios>())
             {
                 try
                 {
-                    Result = repoitorio.Lista(busqueda).ToList();
+                    retorno = conn.Lista(busqueda).ToList();
                 }
-                catch
+                catch (Exception)
                 {
 
+                    throw;
                 }
-                return Result;
+                return retorno;
             }
         }
 
         public static List<Usuarios> ListarTodo()
         {
-            List<Usuarios> Result = null;
-            using (var repoitorio = new Repositorio<Usuarios>())
+            List<Usuarios> retorno = null;
+            using (var conn = new Repositorio<Usuarios>())
             {
                 try
                 {
-                    Result = repoitorio.ListaGet().ToList();
+                    retorno = conn.ListaGet().ToList();
+
                 }
-                catch { }
-                return Result;
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                return retorno;
             }
         }
 

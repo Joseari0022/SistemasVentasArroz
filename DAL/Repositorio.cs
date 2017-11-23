@@ -90,32 +90,27 @@ namespace DAL
 
         public List<TEntity> Lista(Expression<Func<TEntity, bool>> Busqueda)
         {
-            List<TEntity> Resultado = null;
-
             try
             {
-                Resultado = EntitySet.Where(Busqueda).ToList();
+                return EntitySet.Where(Busqueda).ToList();
             }
             catch (Exception)
             {
+
                 throw;
             }
-
-            return Resultado;
         }
 
         public List<TEntity> ListaGet()
         {
-            using (var Conex = new SistemaVentasDb())
+            try
             {
-                try
-                {
-                    return EntitySet.ToList();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return EntitySet.ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
 
         }

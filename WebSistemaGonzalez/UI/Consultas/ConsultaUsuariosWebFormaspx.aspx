@@ -18,17 +18,32 @@
     <div class="container">
         <div class="text-center">
             <h2 class="auto-style1"> <span class="auto-style2">Consulta Usuarios</span></h2>
-            <%-- Filtro --%>
             <dl>
                 <dd>
-                    <h5><span class="auto-style1">Filtrar</span>&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList1" runat="server" class="btn btn-Button4" Width="147px" Height="16px">
+                    <h5><span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filtrar</span>&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="FiltroDropDownList" runat="server" class="btn btn-Button4" Width="147px" Height="16px" AutoPostBack="True">
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem>Id</asp:ListItem>
+                        <asp:ListItem>Nombre Usuario</asp:ListItem>
+                        <asp:ListItem>Nombres</asp:ListItem>
+                        <asp:ListItem>Todos</asp:ListItem>
                         </asp:DropDownList>
-                        <asp:TextBox ID="idUsuarioTextbox" runat="server" Width="289px" Height="33px"></asp:TextBox>
-                        &nbsp;&nbsp;&nbsp;<asp:Button ID="FiltrarButton" runat="server" Text="Buscar" class="btn btn-Button4" />
+                        <asp:TextBox ID="FlitrarTextbox" runat="server" Width="289px" Height="33px"></asp:TextBox>
+                        &nbsp;&nbsp;&nbsp;<asp:Button ID="BuscarButton" runat="server" Text="Buscar" class="btn btn-Button4" />
+                        <asp:DropDownList ID="DropDownList1" runat="server" CausesValidation="true" Height="22px" Width="110px">
+                            <asp:ListItem></asp:ListItem>
+                            <asp:ListItem>Id</asp:ListItem>
+                            <asp:ListItem>Nombre</asp:ListItem>
+                            <asp:ListItem>Fecha</asp:ListItem>
+                            <asp:ListItem>Todos</asp:ListItem>
+                        </asp:DropDownList>
                     </h5>
-                </dd>
+                <dd>
+                    <h5><span class="auto-style1">Desde</span>
+                        <asp:TextBox ID="DesdeTextBox" runat="server" Width="167px" Height="33px"></asp:TextBox>
+                        &nbsp;&nbsp;<span class="auto-style1">Hasta&nbsp;</span><asp:TextBox ID="HastaTextBox" runat="server" CssClass="auto-style1" Width="167px" Height="33px"></asp:TextBox>
+                    </h5>
             </dl>
-            <asp:GridView ID="GridView1" CssClass="auto-style3" runat="server" ForeColor="#333333" Width="467px" ShowFooter="True" Height="162px" HorizontalAlign="Center">
+            <asp:GridView ID="ConsultaUsuarioGridView" CssClass="auto-style3" runat="server" ForeColor="#333333" Width="467px" ShowFooter="True" Height="162px" HorizontalAlign="Center">
                 <AlternatingRowStyle BackColor="White" Font-Bold="False" />
                 <EditRowStyle BackColor="#2461BF" HorizontalAlign="Center" VerticalAlign="Middle" />
                 <EmptyDataRowStyle HorizontalAlign="Center" VerticalAlign="Bottom" />
@@ -43,4 +58,5 @@
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
             </div>
+    </div>
 </asp:Content>

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSistemaGonzalez", "WebSistemaGonzalez\WebSistemaGonzalez.csproj", "{25D4A9A5-D8DD-4698-B454-27065C274E64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLLTests", "BLLTests\BLLTests.csproj", "{93092228-444A-4B3F-AE71-D249FE0296E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{25D4A9A5-D8DD-4698-B454-27065C274E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25D4A9A5-D8DD-4698-B454-27065C274E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25D4A9A5-D8DD-4698-B454-27065C274E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93092228-444A-4B3F-AE71-D249FE0296E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93092228-444A-4B3F-AE71-D249FE0296E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93092228-444A-4B3F-AE71-D249FE0296E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93092228-444A-4B3F-AE71-D249FE0296E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

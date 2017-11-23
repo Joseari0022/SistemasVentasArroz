@@ -33,6 +33,7 @@ namespace WebSistemaGonzalez.UI.Registros
                 dt.Columns.AddRange(new DataColumn[4] { new DataColumn("Descripcion"), new DataColumn("Precio"), new DataColumn("Cantidad"), new DataColumn("Importe") });
                 ViewState["DetalleFactura"] = dt;
             }
+            FechaTextBox.Enabled = false;
         }
 
         protected void BindGrid()

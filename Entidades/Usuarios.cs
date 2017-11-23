@@ -15,7 +15,6 @@ namespace Entidades
         public string Nombres { get; set; }
         public string Contrasena { get; set; }
         public DateTime Fecha { get; set; }
-
         
     }
 }

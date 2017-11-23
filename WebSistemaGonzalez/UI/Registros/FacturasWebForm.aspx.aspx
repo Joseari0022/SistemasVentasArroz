@@ -76,6 +76,8 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" BorderStyle="Solid" BorderWidth="3px" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
+
+
             <div class="text-center">
                 <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" class="btn btn-Button4" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -84,5 +86,5 @@
                 <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" class="btn btn-Button4" />
         </div>
 
-
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </asp:Content>
