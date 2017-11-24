@@ -9,7 +9,7 @@
             <%-- Filtro --%>
             <dl>
                 <dd>
-                    <h5><span class="auto-style1">Filtrar</span>&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList" runat="server">
+                    <h5 id="ImprimirButton" aria-busy="False"><span class="auto-style1">Filtrar</span>&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList" runat="server">
                         <asp:ListItem Value="Id"></asp:ListItem>
                         <asp:ListItem Value="Descripcion"></asp:ListItem>
                         <asp:ListItem Value="Cantidad"></asp:ListItem>
@@ -35,6 +35,7 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" BorderStyle="Solid" BorderWidth="3px" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
+            <asp:Button ID="ImprimirButton" runat="server" OnClick="ImprimirButton_Click" Text="Imprimir" />
             </div>
 </div>
 </asp:Content>

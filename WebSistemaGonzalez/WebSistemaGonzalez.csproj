@@ -160,6 +160,8 @@
     <Content Include="UI\Registros\FacturasWebForm.aspx.aspx" />
     <Content Include="UI\Registros\ProductosWebForm.aspx" />
     <Content Include="UI\Registros\UsuariosWebForm.aspx" />
+    <Content Include="UI\Reportes\ReportesFacturasWebForm.aspx" />
+    <Content Include="UI\Reportes\ReportesProductosWebForm.aspx" />
     <Content Include="UI\Reportes\ReportesUsuariosWebForm.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -244,6 +246,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetSistemaGonzalez.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UI\Reportes\ReportesFacturasWebForm.aspx.cs">
+      <DependentUpon>ReportesFacturasWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ReportesFacturasWebForm.aspx.designer.cs">
+      <DependentUpon>ReportesFacturasWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\ReportesProductosWebForm.aspx.cs">
+      <DependentUpon>ReportesProductosWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ReportesProductosWebForm.aspx.designer.cs">
+      <DependentUpon>ReportesProductosWebForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\Reportes\ReportesUsuariosWebForm.aspx.cs">
       <DependentUpon>ReportesUsuariosWebForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -272,6 +288,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="UI\Reportes\FacturasReport.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\ProductosReport.rdlc" />
     <EmbeddedResource Include="UI\Reportes\UsuariosReport.rdlc" />
   </ItemGroup>
   <PropertyGroup>

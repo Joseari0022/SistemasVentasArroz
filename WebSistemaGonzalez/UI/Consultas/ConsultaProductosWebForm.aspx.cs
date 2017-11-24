@@ -20,7 +20,7 @@ namespace WebSistemaGonzalez.UI.Consultas
         {
             BuscarSelecCombo();
         }
-        public List<Productos> Listas { get; set; }
+        public static List<Productos> Listas { get; set; }
 
         private void BuscarSelecCombo()
         {
@@ -82,6 +82,11 @@ namespace WebSistemaGonzalez.UI.Consultas
             }
             ConsultaproductoGridView.DataSource = Listas;
             ConsultaproductoGridView.DataBind();
+        }
+
+        protected void ImprimirButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Reportes/ReportesProductosWebForm.aspx");
         }
     }
 }

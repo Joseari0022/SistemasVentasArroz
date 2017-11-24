@@ -21,7 +21,7 @@ namespace WebSistemaGonzalez.UI.Consultas
             BuscarSelecCombo();
         }
 
-         public List<Facturas> Listas { get; set; }
+         public static List<Facturas> Listas { get; set; }
 
         private void BuscarSelecCombo()
         {
@@ -83,6 +83,11 @@ namespace WebSistemaGonzalez.UI.Consultas
             }
             ConsultaFacturaGridView.DataSource = Listas;
             ConsultaFacturaGridView.DataBind();
+        }
+
+        protected void ImprimirButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Reportes/ReportesProductosWebForm.aspx");
         }
     }
 }

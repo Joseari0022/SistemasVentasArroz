@@ -35,6 +35,7 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" BorderStyle="Solid" BorderWidth="3px" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
+            <asp:Button ID="ImprimirButton" runat="server" OnClick="ImprimirButton_Click" Text="Imprimir" />
             </div>
 </div>
 </asp:Content>
