@@ -13,13 +13,13 @@ namespace WebSistemaGonzalez.UI.Consultas {
     public partial class ConsultaUsuariosWebFormaspx {
         
         /// <summary>
-        /// FiltroDropDownList control.
+        /// DropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList FiltroDropDownList;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList;
         
         /// <summary>
         /// FlitrarTextbox control.
@@ -38,15 +38,6 @@ namespace WebSistemaGonzalez.UI.Consultas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BuscarButton;
-        
-        /// <summary>
-        /// DropDownList1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
         /// DesdeTextBox control.

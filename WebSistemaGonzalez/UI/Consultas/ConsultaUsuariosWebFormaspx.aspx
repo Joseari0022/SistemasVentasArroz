@@ -20,22 +20,13 @@
             <h2 class="auto-style1"> <span class="auto-style2">Consulta Usuarios</span></h2>
             <dl>
                 <dd>
-                    <h5><span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filtrar</span>&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="FiltroDropDownList" runat="server" class="btn btn-Button4" Width="147px" Height="16px" AutoPostBack="True">
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem>Id</asp:ListItem>
-                        <asp:ListItem>Nombre Usuario</asp:ListItem>
-                        <asp:ListItem>Nombres</asp:ListItem>
-                        <asp:ListItem>Todos</asp:ListItem>
+                    <h5><span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filtrar</span>&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList" runat="server">
+                        <asp:ListItem Value="Id"></asp:ListItem>
+                        <asp:ListItem Value="NombreUsuario"></asp:ListItem>
+                        <asp:ListItem Value="Nombres"></asp:ListItem>
                         </asp:DropDownList>
-                        <asp:TextBox ID="FlitrarTextbox" runat="server" Width="289px" Height="33px"></asp:TextBox>
-                        &nbsp;&nbsp;&nbsp;<asp:Button ID="BuscarButton" runat="server" Text="Buscar" class="btn btn-Button4" />
-                        <asp:DropDownList ID="DropDownList1" runat="server" CausesValidation="true" Height="22px" Width="110px">
-                            <asp:ListItem></asp:ListItem>
-                            <asp:ListItem>Id</asp:ListItem>
-                            <asp:ListItem>Nombre</asp:ListItem>
-                            <asp:ListItem>Fecha</asp:ListItem>
-                            <asp:ListItem>Todos</asp:ListItem>
-                        </asp:DropDownList>
+                        &nbsp;<asp:TextBox ID="FlitrarTextbox" runat="server" Width="289px" Height="33px"></asp:TextBox>
+                        &nbsp;&nbsp;&nbsp;<asp:Button ID="BuscarButton" runat="server" Text="Buscar" class="btn btn-Button4" OnClick="BuscarButton_Click" />
                     </h5>
                 <dd>
                     <h5><span class="auto-style1">Desde</span>

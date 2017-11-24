@@ -13,22 +13,22 @@ namespace WebSistemaGonzalez.UI.Consultas {
     public partial class ConsultaFacturasWebForm {
         
         /// <summary>
-        /// DropDownList1 control.
+        /// DropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList;
         
         /// <summary>
-        /// idUsuarioTextbox control.
+        /// FlitrarTextbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idUsuarioTextbox;
+        protected global::System.Web.UI.WebControls.TextBox FlitrarTextbox;
         
         /// <summary>
         /// FiltrarButton control.
@@ -40,12 +40,12 @@ namespace WebSistemaGonzalez.UI.Consultas {
         protected global::System.Web.UI.WebControls.Button FiltrarButton;
         
         /// <summary>
-        /// GridView1 control.
+        /// ConsultaFacturaGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView ConsultaFacturaGridView;
     }
 }

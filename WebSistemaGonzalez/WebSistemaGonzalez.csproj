@@ -211,6 +211,7 @@
   <ItemGroup>
     <Folder Include="Content\IMG\" />
     <Folder Include="Models\" />
+    <Folder Include="UI\Reportes\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

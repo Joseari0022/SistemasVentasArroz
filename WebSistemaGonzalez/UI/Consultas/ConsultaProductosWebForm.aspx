@@ -9,14 +9,19 @@
             <%-- Filtro --%>
             <dl>
                 <dd>
-                    <h5><span class="auto-style1">Filtrar</span>&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList1" runat="server" class="btn btn-Button4" Width="147px" Height="16px">
+                    <h5><span class="auto-style1">Filtrar</span>&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList" runat="server">
+                        <asp:ListItem Value="Id"></asp:ListItem>
+                        <asp:ListItem Value="Descripcion"></asp:ListItem>
+                        <asp:ListItem Value="Cantidad"></asp:ListItem>
+                        <asp:ListItem Value="Precio"></asp:ListItem>
+                        <asp:ListItem Value="Fecha"></asp:ListItem>
                         </asp:DropDownList>
-                        <asp:TextBox ID="idUsuarioTextbox" runat="server" Width="289px" Height="33px"></asp:TextBox>
-                        &nbsp;&nbsp;&nbsp;<asp:Button ID="FiltrarButton" runat="server" Text="Buscar" class="btn btn-Button4" />
+                        <asp:TextBox ID="FlitrarTextbox" runat="server" Width="289px" Height="33px"></asp:TextBox>
+                        &nbsp;&nbsp;&nbsp;<asp:Button ID="FiltrarButton" runat="server" Text="Buscar" class="btn btn-Button4" OnClick="FiltrarButton_Click" />
                     </h5>
                 </dd>
             </dl>
-            <asp:GridView ID="GridView1" CssClass="auto-style3" runat="server" ForeColor="#333333" Width="467px" ShowFooter="True" Height="162px" HorizontalAlign="Center">
+            <asp:GridView ID="ConsultaproductoGridView" CssClass="auto-style3" runat="server" ForeColor="#333333" Width="467px" ShowFooter="True" Height="162px" HorizontalAlign="Center">
                 <AlternatingRowStyle BackColor="White" Font-Bold="False" />
                 <EditRowStyle BackColor="#2461BF" HorizontalAlign="Center" VerticalAlign="Middle" />
                 <EmptyDataRowStyle HorizontalAlign="Center" VerticalAlign="Bottom" />
@@ -31,4 +36,5 @@
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
             </div>
+</div>
 </asp:Content>

@@ -11,97 +11,59 @@ namespace WebSistemaGonzalez.UI.Consultas
 {
     public partial class ConsultaUsuariosWebFormaspx : System.Web.UI.Page
     {
-        public List<Usuarios> Listas { get; set; }
+       
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ConsultaUsuarioGridView.DataSource = UsuariosBll.ListarTodo();
-            //ConsultaUsuarioGridView.DataBind();
-            if (IsPostBack)
-            {
-                Listas = UsuariosBll.ListarTodo();
-                ScriptResourceDefinition myScriptResDef = new ScriptResourceDefinition();
-                myScriptResDef.Path = "~/Scripts/jquery-1.4.2.min.js";
-                myScriptResDef.DebugPath = "~/Scripts/jquery-1.4.2.js";
-                myScriptResDef.CdnPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js";
-                myScriptResDef.CdnDebugPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.js";
-                ScriptManager.ScriptResourceMapping.AddDefinition("jquery", null, myScriptResDef);
-
-            }
             
         }
 
-        public void SeleccionarCombo()
+        public List<Usuarios> Listas { get; set; }
+
+        private void BuscarSelecCombo()
         {
-            if (DropDownList1.SelectedIndex == 0)
+            if (DropDownList.SelectedIndex == 0)
             {
-                Listas = null;
+                int Busqueda = Utilidades.ToInt(FlitrarTextbox.Text);
+                Listas = UsuariosBll.Listar(p => p.IdUsuarios == Busqueda);
+                ConsultaUsuarioGridView.DataSource = Listas;
+                ConsultaUsuarioGridView.DataBind();
             }
-            else if (DropDownList1.SelectedIndex == 1)
+            else if (DropDownList.SelectedIndex == 1)
             {
                 if (FlitrarTextbox.Text == "")
                 {
-                    Utilidades.ShowToastr(this, "Debes Insertar Id", "error", "error");
-                    Listas = null;
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Debe de Insertar la descripcion');</script>");
                 }
                 else
                 {
-                    int id = Convert.ToInt32(FlitrarTextbox.Text);
-                    Listas = UsuariosBll.Listar(p => p.IdUsuarios == id);
-                    
+                    Listas = UsuariosBll.Listar(p => p.NombresUsuarios == FlitrarTextbox.Text);
+                    ConsultaUsuarioGridView.DataSource = Listas;
+                    ConsultaUsuarioGridView.DataBind();
                 }
-
-
             }
-            else if (DropDownList1.SelectedIndex == 2)
+            else if (DropDownList.SelectedIndex == 2)
             {
                 if (FlitrarTextbox.Text == "")
                 {
-                    Utilidades.ShowToastr(this, "Debes Insertar Nombre", "error", "error");
-                    Listas = null;
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Debe de Insertar el Monto');</script>");
                 }
                 else
                 {
                     Listas = UsuariosBll.Listar(p => p.Nombres == FlitrarTextbox.Text);
-                    
+                    ConsultaUsuarioGridView.DataSource = Listas;
+                    ConsultaUsuarioGridView.DataBind();
                 }
-
-
             }
-            else if (DropDownList1.SelectedIndex == 3)
+            else if (DropDownList.SelectedIndex == 2)
             {
-                FlitrarTextbox.Text = "";
+                DateTime desde = DateTime.Now;
+                DateTime hasta = DateTime.Now;
 
-                if (DesdeTextBox.Text != "" && HastaTextBox.Text != "")
-                {
-                    DateTime desde = Convert.ToDateTime(DesdeTextBox.Text);
-                    DateTime hasta = Convert.ToDateTime(DesdeTextBox.Text);
-                    if (desde <= hasta)
-                    {
-                        Listas = UsuariosBll.Listar(p => p.Fecha >= desde && p.Fecha <= hasta);
-                        
-                    }
-                    else
-                    {
-                        Utilidades.ShowToastr(this, "La Primera Fecha debe ser Menor que la Segunda Fecha", "error", "error");
-                        Listas = null;
-                    }
-                }
-                else
-                {
-                    Utilidades.ShowToastr(this, "Debes Insertar las Fechas", "error", "error");
-                    Listas = null;
-                }
+                Listas = UsuariosBll.Listar(p => p.Fecha >= desde.Date && p.Fecha <= hasta.Date);
 
-
-
-            }
-            else if (DropDownList1.SelectedIndex == 4)
-            {
-
-                Listas = UsuariosBll.ListarTodo();
-                
-
+                ConsultaUsuarioGridView.DataSource = Listas;
+                ConsultaUsuarioGridView.DataBind();
             }
             ConsultaUsuarioGridView.DataSource = Listas;
             ConsultaUsuarioGridView.DataBind();
@@ -109,7 +71,12 @@ namespace WebSistemaGonzalez.UI.Consultas
 
         protected void FiltrarButton_Click(object sender, EventArgs e)
         {
-            SeleccionarCombo();
+            
+        }
+
+        protected void BuscarButton_Click(object sender, EventArgs e)
+        {
+            BuscarSelecCombo();
         }
     }
 }
