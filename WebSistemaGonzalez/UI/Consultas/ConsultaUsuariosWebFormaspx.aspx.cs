@@ -18,7 +18,7 @@ namespace WebSistemaGonzalez.UI.Consultas
             
         }
 
-        public List<Usuarios> Listas { get; set; }
+        public static List<Usuarios> Listas { get; set; }
 
         private void BuscarSelecCombo()
         {
@@ -77,6 +77,11 @@ namespace WebSistemaGonzalez.UI.Consultas
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
             BuscarSelecCombo();
+        }
+
+        protected void ImprimirButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Reportes/ReportesUsuariosWebForm.aspx");
         }
     }
 }

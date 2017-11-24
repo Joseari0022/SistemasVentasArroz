@@ -34,7 +34,7 @@
                         &nbsp;&nbsp;<span class="auto-style1">Hasta&nbsp;</span><asp:TextBox ID="HastaTextBox" runat="server" CssClass="auto-style1" Width="167px" Height="33px"></asp:TextBox>
                     </h5>
             </dl>
-            <asp:GridView ID="ConsultaUsuarioGridView" CssClass="auto-style3" runat="server" ForeColor="#333333" Width="467px" ShowFooter="True" Height="162px" HorizontalAlign="Center">
+            <asp:GridView ID="ConsultaUsuarioGridView" CssClass="auto-style3" runat="server" ForeColor="#333333" Width="758px" ShowFooter="True" Height="115px" HorizontalAlign="Center">
                 <AlternatingRowStyle BackColor="White" Font-Bold="False" />
                 <EditRowStyle BackColor="#2461BF" HorizontalAlign="Center" VerticalAlign="Middle" />
                 <EmptyDataRowStyle HorizontalAlign="Center" VerticalAlign="Bottom" />
@@ -48,6 +48,7 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" BorderStyle="Solid" BorderWidth="3px" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
+            <asp:Button ID="ImprimirButton" runat="server" OnClick="ImprimirButton_Click" Text="Imprimir" />
             </div>
     </div>
 </asp:Content>
