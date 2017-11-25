@@ -34,13 +34,14 @@ namespace WebSistemaGonzalez.UI.Registros
                 ViewState["DetalleFactura"] = dt;
             }
             FechaTextBox.Enabled = false;
+            ComboCliente();
         }
 
         protected void BindGrid()
         {
             DataTable dt = new DataTable();
-            FacturaGridView.DataSource = (DataTable)ViewState["DetalleFactura"];
-            FacturaGridView.DataBind();
+            //FacturaGridView.DataSource = (DataTable)ViewState["DetalleFactura"];
+            //FacturaGridView.DataBind();
         }
 
         protected void AgregarButton_Click(object sender, EventArgs e)
@@ -54,11 +55,6 @@ namespace WebSistemaGonzalez.UI.Registros
             dt.Rows.Add(DescripcionTextBox.Text, PrecioTextBox.Text, CantidadTextBox.Text);
             ViewState["DetalleFactura"] = dt;
             this.BindGrid();
-
-            //factura.producto.Add(new Productos(Convert.ToInt32(IdProductoTextBox.Text), DescripcionTextBox.Text, Convert.ToInt32(CantidadTextBox.Text), Convert.ToInt32(PrecioTextBox.Text)));
-            //FacturaGridView.DataSource = null;
-            //FacturaGridView.DataSource = factura.producto;
-            //FacturaGridView.DataBind();
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
@@ -89,119 +85,72 @@ namespace WebSistemaGonzalez.UI.Registros
             }
         }
 
-         void FacturaGridView_SelectedIndexChanged(Object sender, GridViewDeleteEventArgs e)
-        {
-            
-        }
-
-        protected void FacturaGridView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int str_mivariable;
-            str_mivariable = FacturaGridView.Rows.Count;
-
-            foreach (DataRow dr_Fila in FacturaGridView.Rows)
-            {
-                
-                    dr_Fila.Delete();
-                    FacturaGridView.DataSource = FacturaGridView;
-                    FacturaGridView.DataBind();
-                    break;
-                
-            }
-        }
-
-        protected void FacturaGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            //TableCell cell = FacturaGridView.Rows[e.RowIndex].Cells[0];
-            //if (cell.Text == "Beaver")
-            //{
-            //    e.Cancel = true;
-            //    //Message.Text = "You cannot delete customer Beaver.";
-            //}
-            //else
-            //{
-
-            //}
-            
-        }
-
         protected void EliminarButton_Click(object sender, EventArgs e)
         {
-            
+
         }
-       
+
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
-            
-            
-            Llenar(factura);
-            FacturaBll.Guardar(factura);
-            // Utilidades.ShowToastr(this, "El Usuario", " Se Guardo Correctamente", "Success");
+            Facturas facturas = new Facturas();
+            if (IsValid)
+            {
+                if (factura.IdFactura != 0)
+                {
+                    FacturaBll.Modificar(factura);
+                    Utilidades.ShowToastr(this, "El Usuario", " Se Modifico Correctamente", "Success");
+                }
+                else
+                {
+                    factura = Llenar();
+                    FacturaBll.Guardar(factura);
+                    Utilidades.ShowToastr(this, "El Usuario", " Se Guardo Correctamente", "Success");
+                    //Limpiar();
 
-                
-            
+                }
+            }
+
         }
 
-        private Facturas Llenar(Facturas factura)
+        private Facturas Llenar()
         {
-            Productos p = new Productos();
-
-          
-            //factura.FechaCreacion = Convert.ToDateTime(FechaTextBox.Text);
-            factura.NombreCliente = NombreClienteTextBox.Text;
-            //foreach (GridViewRow dr in FacturaGridView.Rows)
-            //{
-            //    p.Descripcion = dr.Cells[0].Text;
-            //    p.Cantidad = Convert.ToInt32(dr.Cells[1].Text);
-            //    p.Precio = Convert.ToInt32(dr.Cells[2].Text);
-            //}
-
+            factura.TipoPago = TipoPagoDropDownList.SelectedValue.ToString();
+            factura.NombreCliente = ClienteDropDownList.SelectedValue.ToString();
+            factura.FechaCreacion = Convert.ToDateTime(FechaTextBox.Text);
+            factura.SubTotal = Convert.ToInt32(SubTotalTextBox.Text);
+            factura.Total = Convert.ToInt32(TotalTextBox.Text);
             return factura;
         }
 
-        
-        //private void Detalle()
-        //{
-        //    using (SqlConnection conn = new SqlConnection("<connection string>"))
-        //    {
-        //        conn.Open();
-
-        //        string query = "INSERT INTO Factura (Descripcion) VALUES (@param1)";
-        //        SqlCommand cmd = new SqlCommand(query, conn);
 
 
-        //        foreach (GridViewRow row in FacturaGridView.Rows)
-        //        {
-        //            cmd.Parameters.Clear();
-
-        //            cmd.Parameters.AddWithValue("@param1", Convert.ToString(row.Cells[0].Text));
-
-        //            cmd.ExecuteNonQuery();
-        //        }
-        //    }
-        //}
 
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
             int id = Utilidades.ToInt(IdFacturaTextBox.Text);
-            //factura = FacturaBll.Buscar(id);
-
+            Facturas factura = FacturaBll.Buscar(u => u.IdFactura == id);
             if (factura != null)
             {
-
-                //PagoTextBox.Text = facturar.formaPago;
-                //DescuentoTextBox.Text = Convert.ToString(facturar.descuento);
-                //ItbisTextBox.Text = Convert.ToString(facturar.itbis);
-                //ComentarioTextBox.Text = Convert.ToString(facturar.comentario);
-                //SubTextBox.Text = Convert.ToString(facturar.subTotal);
-                //TotalTextBox.Text = Convert.ToString(facturar.total);
-                //LogIn.LabelUsuario().nombres = facturar.usuario;
+                ClienteDropDownList.SelectedValue = factura.NombreCliente;
+                TipoPagoDropDownList.SelectedValue = factura.TipoPago;
+                FechaTextBox.Text = factura.FechaCreacion.ToString();
+                SubTotalTextBox.Text = Convert.ToString(factura.SubTotal);
+                TotalTextBox.Text = Convert.ToString(factura.Total);
+                Utilidades.ShowToastr(this, "Si Existe", "Factura Encontrado", "Success");
             }
             else
             {
-                Page.ClientScript.RegisterStartupScript(GetType(), "scripts", "<script>alert('No existe');</script>");
-               // Limpiar();
+                Utilidades.ShowToastr(this, "No Existe", "Ingresar Factura Existente", "warning");
             }
+        }
+
+        public void ComboCliente()
+        {
+            List<Clientes> lista = ClientesBll.ListarTodo();
+            ClienteDropDownList.DataSource = lista;
+            ClienteDropDownList.DataTextField = "Nombres";
+            ClienteDropDownList.DataValueField = "IdClientes";
+            ClienteDropDownList.DataBind();
         }
     }
 }

@@ -167,6 +167,8 @@
     <Content Include="Scripts\jquery-3.2.1.min.map" />
     <Content Include="Toastr\toastr.min.css" />
     <Content Include="Toastr\toastr.min.js" />
+    <Content Include="UI\Consultas\ConsultaClientesWebForm.aspx" />
+    <Content Include="UI\Registros\ClientesWebForm.aspx" />
     <Content Include="UI\Reportes\DataSetSistemaGonzalez.xsc">
       <DependentUpon>DataSetSistemaGonzalez.xsd</DependentUpon>
     </Content>
@@ -215,6 +217,7 @@
     <Content Include="UI\Registros\FacturasWebForm.aspx.aspx" />
     <Content Include="UI\Registros\ProductosWebForm.aspx" />
     <Content Include="UI\Registros\UsuariosWebForm.aspx" />
+    <Content Include="UI\Reportes\ReportesClientesWebForm.aspx" />
     <Content Include="UI\Reportes\ReportesFacturasWebForm.aspx" />
     <Content Include="UI\Reportes\ReportesProductosWebForm.aspx" />
     <Content Include="UI\Reportes\ReportesUsuariosWebForm.aspx" />
@@ -268,6 +271,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UI\Consultas\ConsultaClientesWebForm.aspx.cs">
+      <DependentUpon>ConsultaClientesWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaClientesWebForm.aspx.designer.cs">
+      <DependentUpon>ConsultaClientesWebForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\Consultas\ConsultaFacturasWebForm.aspx.cs">
       <DependentUpon>ConsultaFacturasWebForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -288,6 +298,13 @@
     </Compile>
     <Compile Include="UI\Consultas\ConsultaUsuariosWebFormaspx.aspx.designer.cs">
       <DependentUpon>ConsultaUsuariosWebFormaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\ClientesWebForm.aspx.cs">
+      <DependentUpon>ClientesWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\ClientesWebForm.aspx.designer.cs">
+      <DependentUpon>ClientesWebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\FacturasWebForm.aspx.aspx.cs">
       <DependentUpon>FacturasWebForm.aspx.aspx</DependentUpon>
@@ -314,6 +331,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetSistemaGonzalez.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\ReportesClientesWebForm.aspx.cs">
+      <DependentUpon>ReportesClientesWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ReportesClientesWebForm.aspx.designer.cs">
+      <DependentUpon>ReportesClientesWebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Reportes\ReportesFacturasWebForm.aspx.cs">
       <DependentUpon>ReportesFacturasWebForm.aspx</DependentUpon>
@@ -356,6 +380,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="UI\Reportes\ClientesReport.rdlc" />
     <EmbeddedResource Include="UI\Reportes\FacturasReport.rdlc" />
     <EmbeddedResource Include="UI\Reportes\ProductosReport.rdlc" />
     <EmbeddedResource Include="UI\Reportes\UsuariosReport.rdlc" />

@@ -55,16 +55,6 @@ namespace WebSistemaGonzalez.UI.Consultas
                     ConsultaUsuarioGridView.DataBind();
                 }
             }
-            else if (DropDownList.SelectedIndex == 2)
-            {
-                DateTime desde = DateTime.Now;
-                DateTime hasta = DateTime.Now;
-
-                Listas = UsuariosBll.Listar(p => p.Fecha >= desde.Date && p.Fecha <= hasta.Date);
-
-                ConsultaUsuarioGridView.DataSource = Listas;
-                ConsultaUsuarioGridView.DataBind();
-            }
             ConsultaUsuarioGridView.DataSource = Listas;
             ConsultaUsuarioGridView.DataBind();
         }

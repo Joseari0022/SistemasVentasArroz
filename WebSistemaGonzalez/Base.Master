@@ -40,6 +40,15 @@
 
                     </ul>
                 </li>
+                <!--clientes-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Clientes <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/UI/Registros/ClientesWebForm.aspx">Registro</a></li>
+                        <li><a href="/UI/Consultas/ConsultaClientesWebForm.aspx">Consulta</a></li>
+
+                    </ul>
+                </li>
                 <!--Productos-->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Productos<span class="caret"></span></a>
@@ -59,7 +68,7 @@
                     </ul>
                 </li>
                 <li><a href="/ContactarWebForm.aspx">Contactar &nbsp</a></li>
-                <li><a href="/Login.aspx">Cerrar Sesion</a></li>
+                <li><a href="/Index.aspx">Cerrar Sesion</a></li>
 
             </ul>
         </div>

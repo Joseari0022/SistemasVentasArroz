@@ -12,51 +12,51 @@ namespace BLL
 {
     public class FacturaBll
     {
-        //public static bool Guardar(Facturas factura)
-        //{
-        //    using (var reposi = new Repositorio<Facturas>())
-        //    {
-        //        try
-        //        {
-        //            if (Buscar(f => f.IdFactura == factura.IdFactura) == null)
-        //            {
-        //                return reposi.Guardar(factura);
-        //            }
-        //            else
-        //            {
-        //                return reposi.Modificar(factura);
-        //            }
-        //        }
-        //        catch (Exception)
-        //        {
-        //            throw;
-        //        }
-        //    }
-        //}
-
-        public static bool Guardar(Facturas gr)
+        public static bool Guardar(Facturas factura)
         {
-            bool re = false;
-            try
+            using (var reposi = new Repositorio<Facturas>())
             {
-                var db = new SistemaVentasDb();
-
-                db.Factura.Add(gr);
-                var gp = db.Factura.Add(gr);
-                foreach (var estud in gr.producto)
+                try
                 {
-                    db.Entry(estud).State = EntityState.Unchanged;
+                    if (Buscar(f => f.IdFactura == factura.IdFactura) == null)
+                    {
+                        return reposi.Guardar(factura);
+                    }
+                    else
+                    {
+                        return reposi.Modificar(factura);
+                    }
                 }
-                db.SaveChanges();
-                db.Dispose();
-                re = true;
+                catch (Exception)
+                {
+                    throw;
+                }
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return re;
         }
+
+        //public static bool Guardar(Facturas gr)
+        //{
+        //    bool re = false;
+        //    try
+        //    {
+        //        var db = new SistemaVentasDb();
+
+        //        db.Factura.Add(gr);
+        //        var gp = db.Factura.Add(gr);
+        //        foreach (var estud in gr.producto)
+        //        {
+        //            db.Entry(estud).State = EntityState.Unchanged;
+        //        }
+        //        db.SaveChanges();
+        //        db.Dispose();
+        //        re = true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    return re;
+        //}
 
         //public static void Insertar(Facturas f)
         //{

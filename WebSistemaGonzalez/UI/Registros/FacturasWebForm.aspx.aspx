@@ -21,20 +21,10 @@
         .auto-style5 {
             height: 50px;
         }
-        .auto-style6 {
-            margin-left: 39;
-        }
-
+        
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <%-- agregar --%>
-        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="/Toastr/toastr.min.js"></script>
-        <link href="/Toastr/toastr.min.css" rel="stylesheet" />
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-
     <div class="container">
         <h2 class="auto-style1">Factura</h2>
         <%-- agregar --%>
@@ -54,10 +44,8 @@
             <div>
                 <label for="Nombres Cliente">Nombres Cliente</label>
             </div>
-        </div>
-        <div class="text-center">
-            <asp:TextBox ID="NombreClienteTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="NombreClienteTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
+            <asp:DropDownList ID="ClienteDropDownList" runat="server" Height="25px" Width="158px">
+            </asp:DropDownList>
         </div>
         <%-- agregar --%>
         <div class="text-center">
@@ -66,7 +54,7 @@
             </div>
         </div>
         <div class="text-center">
-            <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style3" Width="158px">
+            <asp:DropDownList ID="TipoPagoDropDownList" runat="server" CssClass="auto-style3" Width="158px">
                 <asp:ListItem Value="Credito"></asp:ListItem>
                 <asp:ListItem Value="Contado"></asp:ListItem>
             </asp:DropDownList>
@@ -79,7 +67,6 @@
         </div>
         <div class="text-center">
             <asp:TextBox ID="FechaTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="NombreClienteTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
         </div>
         <%-- agregar --%>
         <div class="text-left">
@@ -95,23 +82,7 @@
             <asp:TextBox ID="CantidadTextBox" runat="server" Width="101px" Height="33px"></asp:TextBox>
             &nbsp;
             <asp:Button ID="AgregarButton" runat="server" Text="Agregar" OnClick="AgregarButton_Click" class="btn btn-Button4" />
-&nbsp;<asp:GridView ID="FacturaGridView"  CssClass="text-center" runat="server" CellPadding="0" ClientIDMode="Static" ForeColor="#333333" Width="400px" ShowFooter="True" Height="100px" HorizontalAlign="Center" PageIndex="2" PageSize="2" GridLines="Vertical" OnRowDeleting="FacturaGridView_SelectedIndexChanged" >
-                <AlternatingRowStyle BackColor="White" Font-Bold="False" />
-                <EditRowStyle BackColor="#2461BF" HorizontalAlign="Center" VerticalAlign="Middle" />
-                <EmptyDataRowStyle HorizontalAlign="Center" VerticalAlign="Bottom" />
-                <FooterStyle BackColor="#C0C0C0" Font-Bold="True" ForeColor="White" BorderColor="white" BorderWidth="2px" HorizontalAlign="Justify" VerticalAlign="Top" />
-                <HeaderStyle BackColor="#C0C0C0" Font-Bold="True" ForeColor="White" BorderStyle="Outset" Font-Italic="True" Font-Size="12pt" HorizontalAlign="Center" VerticalAlign="Middle" />
-                <PagerStyle BackColor="#F8F8FF" ForeColor="White" HorizontalAlign="Center" BorderColor="Black" BorderWidth="2px" />
-                <RowStyle BackColor="#EFF3FB" BorderColor="Black" BorderStyle="None" BorderWidth="2px" />
-                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#F5F7FB" BorderStyle="Solid" BorderWidth="3px" />
-                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                <SortedDescendingCellStyle BackColor="#E9EBEF" BorderStyle="Solid" BorderWidth="3px" />
-                <SortedDescendingHeaderStyle BackColor="#4870BE" />
-            </asp:GridView>
-
-
-            <div class="auto-style5">
+&nbsp;<div class="auto-style5">
                 <label for="Fecha">Importe<asp:TextBox ID="SubTotalTextBox" runat="server"></asp:TextBox>
                 </label>
             &nbsp;&nbsp;
@@ -130,8 +101,6 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" class="btn btn-Button4" />
         </div>
-
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </div>
     </div>
 </asp:Content>
