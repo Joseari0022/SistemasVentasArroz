@@ -11,12 +11,11 @@ namespace Entidades
     {
         [Key]
         public int IdFactura { get; set; }
-       // public DateTime FechaCreacion { get; set; }
         public string TipoPago { get; set; }
         public string NombreCliente { get; set; }
-        //public string Direccion { get; set; }
-        //public int Telefono { get; set; }
-        //public decimal Total { get; set; }
+        public DateTime FechaCreacion { get; set; }
+        public float SubTotal { get; set; }
+        public float Total { get; set; }
 
         public virtual List<Productos> producto { get; set; }
         public Facturas()

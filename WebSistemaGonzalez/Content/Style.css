@@ -1,0 +1,32 @@
+﻿.Iconos {
+    font-size: 40px;
+    align-content: center;
+}
+
+.Header-Login {
+    color: black;
+    text-transform: capitalize;
+    font-size: 44px;
+    font-weight: bold;
+    font-family: Castellar;
+}
+
+.Label-LogIn {
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+}
+
+.gridviewDetalle {
+    overflow: auto;
+    align-content: center;
+    width: auto;
+    height: auto;
+}
+
+/*Border de los textbox*/
+.BorderTextBox {
+    border: 2px solid Tomato;
+}
+
+

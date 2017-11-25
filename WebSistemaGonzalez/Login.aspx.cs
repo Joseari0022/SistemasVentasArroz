@@ -41,12 +41,12 @@ namespace WebSistemaGonzalez
             if (ValidarUsuario() && ValidarContrasena() == true)
             {
 
-                Response.Redirect("Default.aspx");
-                Utilidades.ShowToastr(this, "Muy bien sicario", "Correcto", "Success");
+                Response.Redirect("/Default.aspx");
+                Utilidades.ShowToastr(this, "Usuario", "Correcto", "Success");
             }
             else
             {
-                Utilidades.ShowToastr(this, "Muy bien sicario", "Correcto", "Success");
+                Utilidades.ShowToastr(this, "Usuario", "Incorrecto", "warning");
             }
         }
     }

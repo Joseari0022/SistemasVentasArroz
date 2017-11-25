@@ -5,11 +5,12 @@
         .auto-style1 {
             text-align: center;
         }
-        </style>
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <!DOCTYPE html>
+
     <html>
     <head>
         <title>Registro Usuario</title>
@@ -18,12 +19,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <%--<link rel="stylesheet" href="Content/toastr.css" />--%>
-    <%--<link rel="stylesheet" href="Content/toastr.min.css" />--%>
-        <%--<link type="text/javascript" href="Scripts/toastr.js" />
-    <link type="text/javascript" href="Scripts/toastr.min.js" />--%>
-        <%--<script src="Scripts/toastr.min.js" type="text/javascript"/>--%>
-    <%--<script src="Scripts/toastr.js" type="text/javascript"/>--%>
+        <%--toastr--%>
+        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="/Toastr/toastr.min.js"></script>
+        <link href="/Toastr/toastr.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 
     </head>
     <body>
@@ -39,7 +39,7 @@
             </div>
             <div class="text-center">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:TextBox ID="idUsuarioTextbox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="BuscarButton" runat="server" Text="Buscar" type="Button4" class="btn btn-Button4" Width="88px" OnClick="BuscarButton_Click"/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="BuscarButton" runat="server" Text="Buscar" type="Button4" class="btn btn-Button4" Width="88px" OnClick="BuscarButton_Click" />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="idUsuarioTextbox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
             </div>
             <%-- nombre --%>
@@ -88,12 +88,10 @@
 
             <div class="text-center">
 
-                
-                <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" type="Button1" class="btn btn-Button1" OnClick="NuevoButton_Click" Width="88px" /> 
+
+                <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" type="Button1" class="btn btn-Button1" OnClick="NuevoButton_Click" Width="88px" />
                 <asp:Button ID="GuardarButton" runat="server" Text="Guardar" type="Button2" class="btn btn-Button2" Width="88px" OnClick="GuardarButton_Click" />
                 <asp:Button ID="EliminarButton" runat="server" Text="Eliminar'" type="Button3" class="btn btn-Button3" Width="88px" OnClick="EliminarButton_Click" />
-
-                
     </body>
     </html>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

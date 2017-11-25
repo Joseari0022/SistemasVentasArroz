@@ -10,9 +10,9 @@
     <!---------------------------------------------Bootstrap-------------------------------------------------------->
     <link rel="stylesheet" href="Content/Login.css" />
 
-	<!--[if lt IE 9]>
+	
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+	
 
 </head>
 

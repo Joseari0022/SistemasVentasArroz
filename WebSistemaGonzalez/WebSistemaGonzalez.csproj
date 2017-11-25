@@ -97,19 +97,76 @@
       <DependentUpon>SistemaVentaDb.mdf</DependentUpon>
     </Content>
     <Content Include="Base.Master" />
+    <Content Include="ContactarWebForm.aspx" />
+    <Content Include="Content\IMG\15965128_1307459729347032_3276084007169813086_n.jpg" />
+    <Content Include="Content\IMG\54ecfbf939883_1420_!.jpg" />
+    <Content Include="Content\IMG\area-de-ventas.png" />
+    <Content Include="Content\IMG\camera-buying_dotshot_123RF.jpg" />
+    <Content Include="Content\IMG\recursos.png" />
+    <Content Include="Content\IMG\WhatsApp Image 2017-10-22 at 1.51.33 PM.jpeg" />
     <Content Include="Content\JavaScript\JavaScript.js" />
+    <Content Include="Estilos\fonts\fontawesome-webfont.eot" />
+    <Content Include="Estilos\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Estilos\fonts\fontawesome-webfont.woff" />
+    <Content Include="Estilos\fonts\FontAwesome.otf" />
+    <Content Include="Estilos\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Estilos\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Estilos\fonts\glyphicons-halflings-regular.woff" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Content\Style.css" />
+    <Content Include="Estilos\css\animate.css" />
+    <Content Include="Estilos\css\animate.min.css" />
+    <Content Include="Estilos\css\bootstrap-theme.css" />
+    <Content Include="Estilos\css\bootstrap-theme.min.css" />
+    <Content Include="Estilos\css\bootstrap.css" />
+    <Content Include="Estilos\css\bootstrap.min.css" />
+    <Content Include="Estilos\css\font-awesome.css" />
+    <Content Include="Estilos\css\font-awesome.min.css" />
+    <Content Include="Estilos\css\img\bx_loader.gif" />
+    <Content Include="Estilos\css\img\controls.png" />
+    <Content Include="Estilos\css\isotope.css" />
+    <Content Include="Estilos\css\jquery.bxslider.css" />
+    <Content Include="Estilos\css\overwrite.css" />
+    <Content Include="Estilos\css\style.css" />
+    <Content Include="Estilos\fonts\fontawesome-webfont.svg" />
+    <Content Include="Estilos\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Estilos\img\slider\1.jpg" />
+    <Content Include="Estilos\img\slider\5.jpg" />
+    <Content Include="Estilos\img\slider\6.jpg" />
+    <Content Include="Estilos\img\slider\7.jpg" />
+    <Content Include="Estilos\img\team\1.jpg" />
+    <Content Include="Estilos\js\bootstrap.js" />
+    <Content Include="Estilos\js\bootstrap.min.js" />
+    <Content Include="Estilos\js\component.js" />
+    <Content Include="Estilos\js\fancybox\blank.gif" />
+    <Content Include="Estilos\js\fancybox\fancybox_loading.gif" />
+    <Content Include="Estilos\js\fancybox\fancybox_loading_402x.gif" />
+    <Content Include="Estilos\js\fancybox\fancybox_overlay.png" />
+    <Content Include="Estilos\js\fancybox\fancybox_sprite.png" />
+    <Content Include="Estilos\js\fancybox\fancybox_sprite_402x.png" />
+    <Content Include="Estilos\js\fancybox\jquery.fancybox.css" />
+    <Content Include="Estilos\js\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="Estilos\js\functions.js" />
+    <Content Include="Estilos\js\jquery-2.1.1.min.js" />
+    <Content Include="Estilos\js\jquery.bxslider.min.js" />
+    <Content Include="Estilos\js\jquery.easing.1.3.js" />
+    <Content Include="Estilos\js\jquery.isotope.min.js" />
+    <Content Include="Estilos\js\modernizr.custom.js" />
+    <Content Include="Estilos\js\wow.min.js" />
+    <Content Include="Index.aspx" />
     <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Toastr\toastr.min.css" />
+    <Content Include="Toastr\toastr.min.js" />
     <Content Include="UI\Reportes\DataSetSistemaGonzalez.xsc">
       <DependentUpon>DataSetSistemaGonzalez.xsd</DependentUpon>
     </Content>
@@ -136,8 +193,6 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
-    <Content Include="Scripts\toastr.js" />
-    <Content Include="Scripts\toastr.min.js" />
     <Content Include="SistemaVentasDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -175,6 +230,13 @@
     <Compile Include="Base.Master.designer.cs">
       <DependentUpon>Base.Master</DependentUpon>
     </Compile>
+    <Compile Include="ContactarWebForm.aspx.cs">
+      <DependentUpon>ContactarWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactarWebForm.aspx.designer.cs">
+      <DependentUpon>ContactarWebForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -184,6 +246,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -270,7 +339,6 @@
     <Compile Include="Utilidades.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\IMG\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

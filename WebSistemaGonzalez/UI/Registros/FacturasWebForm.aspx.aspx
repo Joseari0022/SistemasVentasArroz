@@ -10,9 +10,30 @@
             margin-left: 40;
         }
 
+        .auto-style3 {
+            margin-left: 0;
+        }
+
+        .auto-style4 {
+            text-align: center;
+            height: 81px;
+        }
+        .auto-style5 {
+            height: 50px;
+        }
+        .auto-style6 {
+            margin-left: 39;
+        }
+
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <%-- agregar --%>
+        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="/Toastr/toastr.min.js"></script>
+        <link href="/Toastr/toastr.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 
     <div class="container">
         <h2 class="auto-style1">Factura</h2>
@@ -37,6 +58,18 @@
         <div class="text-center">
             <asp:TextBox ID="NombreClienteTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="NombreClienteTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
+        </div>
+        <%-- agregar --%>
+        <div class="text-center">
+            <div>
+                <label for="Fecha">Forma de pago</label>
+            </div>
+        </div>
+        <div class="text-center">
+            <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style3" Width="158px">
+                <asp:ListItem Value="Credito"></asp:ListItem>
+                <asp:ListItem Value="Contado"></asp:ListItem>
+            </asp:DropDownList>
         </div>
         <%-- agregar --%>
         <div class="text-center">
@@ -78,7 +111,19 @@
             </asp:GridView>
 
 
-            <div class="text-center">
+            <div class="auto-style5">
+                <label for="Fecha">Importe<asp:TextBox ID="SubTotalTextBox" runat="server"></asp:TextBox>
+                </label>
+            &nbsp;&nbsp;
+                <label for="Fecha">
+                 <br />
+                 Total<asp:TextBox ID="TotalTextBox" runat="server"></asp:TextBox>
+                </label>
+          
+            &nbsp;</div>
+
+
+            <div class="auto-style4">
                 <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" class="btn btn-Button4" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="GuardarButton" runat="server" OnClick="GuardarButton_Click" class="btn btn-Button4" Text="Guardar" />
@@ -87,4 +132,6 @@
         </div>
 
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </div>
+    </div>
 </asp:Content>

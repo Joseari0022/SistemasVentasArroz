@@ -5,11 +5,14 @@
 <html>
 <head runat="server">
     <title></title>
-
+<!---------------------------------------------Toastr-------------------------------------------------------->
+        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="/Toastr/toastr.min.js"></script>
+        <link href="/Toastr/toastr.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <!---------------------------------------------Bootstrap-------------------------------------------------------->
     <link rel="stylesheet" href="Css/bootstrap.min.css" />
     <script src="Css/bootstrap.min.js"></script>
-
     <!--------------------------------------------Tema-------------------------------------------------------------->
     <link rel="stylesheet" href="Css/bootstrapTheme.min.css" />
     
@@ -27,13 +30,13 @@
 
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="Default.aspx">Inicio</a></li>
+                <li class="active"><a href="/Default.aspx">Inicio</a></li>
                 <!--usuarios-->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="UI/Registros/UsuariosWebForm.aspx">Registro</a></li>
-                        <li><a href="UI/Consultas/ConsultaUsuariosWebFormaspx.aspx">Consulta</a></li>
+                        <li><a href="/UI/Registros/UsuariosWebForm.aspx">Registro</a></li>
+                        <li><a href="/UI/Consultas/ConsultaUsuariosWebFormaspx.aspx">Consulta</a></li>
 
                     </ul>
                 </li>
@@ -41,8 +44,8 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Productos<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="UI/Registros/ProductosWebForm.aspx">Registro</a></li>
-                        <li><a href="#">Consulta</a></li>
+                        <li><a href="/UI/Registros/ProductosWebForm.aspx">Registro</a></li>
+                        <li><a href="/UI/Consultas/ConsultaProductosWebForm.aspx">Consulta</a></li>
 
                     </ul>
                 </li>
@@ -50,13 +53,13 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Factura<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="UI/Registros/FacturaWebForm.aspx">Registro</a></li>
-                        <li><a href="#">Consulta</a></li>
+                        <li><a href="/UI/Registros/FacturasWebForm.aspx.aspx">Registro</a></li>
+                        <li><a href="/UI/Consultas/ConsultaFacturasWebForm.aspx">Consulta</a></li>
 
                     </ul>
                 </li>
-                <li><a href="#">Contactar &nbsp</a></li>
-                <li><a href="#">Cerrar Sesion</a></li>
+                <li><a href="/ContactarWebForm.aspx">Contactar &nbsp</a></li>
+                <li><a href="/Login.aspx">Cerrar Sesion</a></li>
 
             </ul>
         </div>

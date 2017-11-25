@@ -16,7 +16,7 @@ namespace WebSistemaGonzalez.UI.Reportes
                 ReportViewerUsuario.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
                 ReportViewerUsuario.Reset();
 
-                ReportViewerUsuario.LocalReport.ReportPath = Server.MapPath(@"Report1.rdlc");
+                ReportViewerUsuario.LocalReport.ReportPath = Server.MapPath(@"UsuariosReport.rdlc");
                 ReportViewerUsuario.LocalReport.DataSources.Clear();
 
 

@@ -54,7 +54,8 @@ namespace WebSistemaGonzalez.UI.Registros
                 NombreUsuarioTextBox.Text = usuario.NombresUsuarios;
                 NombresTextBox.Text = usuario.Nombres;
                 FechaTextBox.Text = usuario.Fecha.ToString();
-            }
+                Utilidades.ShowToastr(this, "Si Existe", "Usuario Encontrado", "Success");
+                }
             else
             {
                 Utilidades.ShowToastr(this, "No Existe", "Ingresar Usuario Existente", "warning");

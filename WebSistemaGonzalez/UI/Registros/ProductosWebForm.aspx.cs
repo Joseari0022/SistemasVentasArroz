@@ -36,10 +36,11 @@ namespace WebSistemaGonzalez.UI.Registros
                 CantidadTextBox.Text = productos.Cantidad.ToString();
                 PrecioTextBox.Text = productos.Precio.ToString();
                 FechaTextBox.Text = productos.FechaCreacion.ToString();
+                Utilidades.ShowToastr(this, "Si Existe", "Producto Encontrado", "Success");
             }
             else
             {
-              //  Utilidades.ShowToastr(this, "No Existe", "Ingresar Usuario Existente", "warning");
+               Utilidades.ShowToastr(this, "No Existe", "Ingresar Producto Existente", "warning");
             }
         }
 
@@ -51,14 +52,14 @@ namespace WebSistemaGonzalez.UI.Registros
                 if (productos.IdProductos != 0)
                 {
                     ProductosBll.Modificar(productos);
-                    //Utilidades.ShowToastr(this, "El Usuario", " Se Modifico Correctamente", "Success");
+                    Utilidades.ShowToastr(this, "El Usuario", " Se Modifico Correctamente", "Success");
                     Limpiar();
                 }
                 else
                 {
                     productos = Llenar();
                     ProductosBll.Guardar(productos);
-                    // Utilidades.ShowToastr(this, "El Usuario", " Se Guardo Correctamente", "Success");
+                    Utilidades.ShowToastr(this, "El Producto", " Se Guardo Correctamente", "Success");
                     Limpiar();
 
                 }
@@ -99,12 +100,12 @@ namespace WebSistemaGonzalez.UI.Registros
                 if (producto.IdProductos != 1)
                 {
                     ProductosBll.Eliminar(producto);
-                    Utilidades.ShowToastr(this, "El Usuario", " Se Elimino Correctamente", "Success");
+                    Utilidades.ShowToastr(this, "El Producto", " Se Elimino Correctamente", "Success");
                     Limpiar();
                 }
                 else
                 {
-                    Utilidades.ShowToastr(this, "El Usuario", "No Se Elimino", "warning");
+                    Utilidades.ShowToastr(this, "El Producto", "No Se Elimino", "warning");
                 }
             }
         }
