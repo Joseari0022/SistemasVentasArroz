@@ -30,7 +30,7 @@ namespace WebSistemaGonzalez.UI.Registros
 
             if (!IsPostBack)
             {
-                dt.Columns.AddRange(new DataColumn[4] { new DataColumn("Descripcion"), new DataColumn("Precio"), new DataColumn("Cantidad"), new DataColumn("Importe") });
+                dt.Columns.AddRange(new DataColumn[3] { new DataColumn("Descripcion"), new DataColumn("Precio"), new DataColumn("Cantidad") });
                 ViewState["DetalleFactura"] = dt;
             }
             FechaTextBox.Enabled = false;
@@ -40,8 +40,9 @@ namespace WebSistemaGonzalez.UI.Registros
         protected void BindGrid()
         {
             DataTable dt = new DataTable();
-            //FacturaGridView.DataSource = (DataTable)ViewState["DetalleFactura"];
-            //FacturaGridView.DataBind();
+            FacturaGridView.DataSource = (DataTable)ViewState["DetalleFactura"];
+            FacturaGridView.DataBind();
+            CalcularMonto();
         }
 
         protected void AgregarButton_Click(object sender, EventArgs e)
@@ -151,6 +152,26 @@ namespace WebSistemaGonzalez.UI.Registros
             ClienteDropDownList.DataTextField = "Nombres";
             ClienteDropDownList.DataValueField = "IdClientes";
             ClienteDropDownList.DataBind();
+        }
+
+        public void CalcularMonto()
+        {
+            decimal Precio = 0m;
+            decimal cantidad = 0;
+            decimal subtotal = 0;
+            decimal total = 0;
+
+            if (FacturaGridView.Rows.Count > 0)
+            {
+                foreach (GridViewRow precio in FacturaGridView.Rows)
+                {
+                    Precio += Convert.ToDecimal(precio.Cells[1].Text);
+                    SubTotalTextBox.Text = Precio.ToString();
+                }
+            }
+           
+            total = Precio;
+            TotalTextBox.Text = total.ToString();
         }
     }
 }

@@ -18,11 +18,15 @@
             text-align: center;
             height: 81px;
         }
+
         .auto-style5 {
             height: 50px;
         }
-        
-        </style>
+        .auto-style6 {
+            margin-left: 5;
+            margin-top: 0px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
@@ -71,7 +75,7 @@
         <%-- agregar --%>
         <div class="text-left">
             <div>
-                <label for="Id">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Descripcion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Precio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cantidad</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="Id">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Descripcion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Precio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cantidad</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
         </div>
         <div class="text-center">
@@ -82,25 +86,43 @@
             <asp:TextBox ID="CantidadTextBox" runat="server" Width="101px" Height="33px"></asp:TextBox>
             &nbsp;
             <asp:Button ID="AgregarButton" runat="server" Text="Agregar" OnClick="AgregarButton_Click" class="btn btn-Button4" />
-&nbsp;<div class="auto-style5">
-                <label for="Fecha">Importe<asp:TextBox ID="SubTotalTextBox" runat="server"></asp:TextBox>
-                </label>
-            &nbsp;&nbsp;
-                <label for="Fecha">
-                 <br />
-                 Total<asp:TextBox ID="TotalTextBox" runat="server"></asp:TextBox>
-                </label>
-          
-            &nbsp;</div>
+            <br />
+            <div class="auto-style1"  class="text-center">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:GridView ID="FacturaGridView" runat="server" CssClass="auto-style6" ForeColor="#333333" Height="115px" HorizontalAlign="Center" ShowFooter="True" Width="758px">
+                    <AlternatingRowStyle BackColor="White" Font-Bold="False" />
+                    <EditRowStyle BackColor="#2461BF" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <EmptyDataRowStyle HorizontalAlign="Center" VerticalAlign="Bottom" />
+                    <FooterStyle BackColor="#C0C0C0" BorderColor="white" BorderWidth="2px" Font-Bold="True" ForeColor="White" HorizontalAlign="Justify" VerticalAlign="Top" />
+                    <HeaderStyle BackColor="#C0C0C0" BorderStyle="Outset" Font-Bold="True" Font-Italic="True" Font-Size="12pt" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <PagerStyle BackColor="#F8F8FF" BorderColor="Black" BorderWidth="2px" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" BorderColor="Black" BorderStyle="None" BorderWidth="2px" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" BorderStyle="Solid" BorderWidth="3px" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" BorderStyle="Solid" BorderWidth="3px" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="auto-style5">
+                    <label for="Fecha">
+                    Subtotal<asp:TextBox ID="SubTotalTextBox" runat="server"></asp:TextBox>
+                    </label>
+                &nbsp;&nbsp;
+                    <label for="Fecha">
+                    <br />Total<asp:TextBox ID="TotalTextBox" runat="server"></asp:TextBox>
+                    </label>
 
-
-            <div class="auto-style4">
-                <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" class="btn btn-Button4" />
+                &nbsp;
+                </div>
+                <div class="auto-style4">
+                    <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" class="btn btn-Button4" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="GuardarButton" runat="server" OnClick="GuardarButton_Click" class="btn btn-Button4" Text="Guardar" />
+                    <asp:Button ID="GuardarButton" runat="server" OnClick="GuardarButton_Click" class="btn btn-Button4" Text="Guardar" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" class="btn btn-Button4" />
-        </div>
+                    <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" class="btn btn-Button4" />
+                </div>
+            </div>
     </div>
     </div>
 </asp:Content>

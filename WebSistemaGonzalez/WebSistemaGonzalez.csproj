@@ -92,10 +92,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\SistemaVentaDb.mdf" />
-    <Content Include="App_Data\SistemaVentaDb_log.ldf">
-      <DependentUpon>SistemaVentaDb.mdf</DependentUpon>
-    </Content>
     <Content Include="Base.Master" />
     <Content Include="ContactarWebForm.aspx" />
     <Content Include="Content\IMG\15965128_1307459729347032_3276084007169813086_n.jpg" />
@@ -165,6 +161,7 @@
     <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="SistemaGonzaelzDb.mdf" />
     <Content Include="Toastr\toastr.min.css" />
     <Content Include="Toastr\toastr.min.js" />
     <Content Include="UI\Consultas\ConsultaClientesWebForm.aspx" />
@@ -195,9 +192,6 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
-    <Content Include="SistemaVentasDb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -362,9 +356,7 @@
     </Compile>
     <Compile Include="Utilidades.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{f7b97da4-686e-489b-b340-e3df3a50a6ac}</Project>

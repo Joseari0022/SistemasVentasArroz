@@ -87,7 +87,7 @@ namespace WebSistemaGonzalez.UI.Consultas
 
         protected void ImprimirButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../Reportes/ReportesProductosWebForm.aspx");
+            Response.Redirect("../Reportes/ReportesFacturasWebForm.aspx");
         }
     }
 }

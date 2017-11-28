@@ -21,7 +21,7 @@ namespace WebSistemaGonzalez.UI.Reportes
 
 
 
-                ReportViewerUsuario.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DataSetFacturas",
+                ReportViewerUsuario.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DataSetFactura",
                     Consultas.ConsultaFacturasWebForm.Listas));
 
                 ReportViewerUsuario.LocalReport.Refresh();

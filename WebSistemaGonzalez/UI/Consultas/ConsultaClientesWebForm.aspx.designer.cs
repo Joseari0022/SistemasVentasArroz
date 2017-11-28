@@ -58,15 +58,6 @@ namespace WebSistemaGonzalez.UI.Consultas {
         protected global::System.Web.UI.WebControls.TextBox HastaTextBox;
         
         /// <summary>
-        /// ConsultaUsuarioGridView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ConsultaUsuarioGridView;
-        
-        /// <summary>
         /// ImprimirButton control.
         /// </summary>
         /// <remarks>
@@ -74,5 +65,14 @@ namespace WebSistemaGonzalez.UI.Consultas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ImprimirButton;
+        
+        /// <summary>
+        /// ConsultaUsuarioGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView ConsultaUsuarioGridView;
     }
 }
