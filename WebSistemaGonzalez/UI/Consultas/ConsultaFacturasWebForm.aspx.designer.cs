@@ -49,13 +49,13 @@ namespace WebSistemaGonzalez.UI.Consultas {
         protected global::System.Web.UI.WebControls.TextBox DesdeTextBox;
         
         /// <summary>
-        /// HastaTextBox control.
+        /// HastaTextBox0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox HastaTextBox;
+        protected global::System.Web.UI.WebControls.TextBox HastaTextBox0;
         
         /// <summary>
         /// ImprimirButton0 control.

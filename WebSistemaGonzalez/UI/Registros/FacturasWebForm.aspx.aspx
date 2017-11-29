@@ -39,7 +39,7 @@
         </div>
         <div class="text-center">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-            <asp:TextBox ID="IdFacturaTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
+            <asp:TextBox ID="IdFacturaTextBox" runat="server" Width="190px" Height="33px" TextMode="Number"></asp:TextBox>
             <asp:Button ID="BuscarButton" runat="server" OnClick="BuscarButton_Click" class="btn btn-Button4" Text="Buscar" />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="IdFacturaTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
         </div>
@@ -75,7 +75,7 @@
         <%-- agregar --%>
         <div class="text-left">
             <div>
-                <label for="Id">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Descripcion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Precio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cantidad</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="Id">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Descripcion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Precio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cantidad</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
         </div>
         <div class="text-center">
@@ -83,7 +83,7 @@
             <asp:TextBox ID="IdProductoTextBox" runat="server" Width="62px" Height="33px" CssClass="auto-style2" OnTextChanged="TextBox1_TextChanged" AutoPostBack="True"></asp:TextBox>
             <asp:TextBox ID="DescripcionTextBox" runat="server" Width="164px" Height="33px"></asp:TextBox>
             <asp:TextBox ID="PrecioTextBox" runat="server" Width="145px" Height="33px"></asp:TextBox>
-            <asp:TextBox ID="CantidadTextBox" runat="server" Width="101px" Height="33px"></asp:TextBox>
+            <asp:TextBox ID="CantidadTextBox" runat="server" Width="101px" Height="33px" TextMode="Number"></asp:TextBox>
             &nbsp;
             <asp:Button ID="AgregarButton" runat="server" Text="Agregar" OnClick="AgregarButton_Click" class="btn btn-Button4" />
             <br />
@@ -116,7 +116,7 @@
                 &nbsp;
                 </div>
                 <div class="auto-style4">
-                    <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" class="btn btn-Button4" />
+                    <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" class="btn btn-Button4" OnClick="NuevoButton_Click" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="GuardarButton" runat="server" OnClick="GuardarButton_Click" class="btn btn-Button4" Text="Guardar" />
                 &nbsp;&nbsp;&nbsp;&nbsp;

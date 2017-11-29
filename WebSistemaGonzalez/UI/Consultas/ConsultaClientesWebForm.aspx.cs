@@ -25,8 +25,8 @@ namespace WebSistemaGonzalez.UI.Consultas
             { 
                     int Busqueda = Utilidades.ToInt(FlitrarTextbox.Text);
                     Listas = ClientesBll.Listar(p => p.IdClientes == Busqueda);
-                Utilidades.ShowToastr(this, "Si Existe", "Cliente Encontrado", "Success");
-                ConsultaUsuarioGridView.DataSource = Listas;
+                    Utilidades.ShowToastr(this, "Si Existe", "Cliente Encontrado", "Success");
+                    ConsultaUsuarioGridView.DataSource = Listas;
                     ConsultaUsuarioGridView.DataBind();
                     
             }

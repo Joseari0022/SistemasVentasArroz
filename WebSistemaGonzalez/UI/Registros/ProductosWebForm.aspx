@@ -30,11 +30,12 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="IdProductoTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="BuscarButton" runat="server" OnClick="BuscarButton_Click" Text="Buscar" class="btn btn-Button4" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="IdProductoTextBox" runat="server" Width="190px" Height="33px" TextMode="Number"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="IdProductoTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="**" ValidationGroup="eliminar" ControlToValidate="IdProductoTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="BuscarButton" runat="server" OnClick="BuscarButton_Click" Text="Buscar" class="btn btn-Button4" ValidationGroup="buscar"  />
                 </div>
                 <%-- Fecha --%>
                 <div class="text-center">
@@ -44,7 +45,7 @@
                 </div>
                 <div class="text-center">
                     <asp:TextBox ID="DescripcionTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="DescripcionTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="**" ValidationGroup="guardar" ControlToValidate="DescripcionTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
                 </div>
                 <%-- Fecha --%>
                 <div class="text-center">
@@ -53,8 +54,8 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <asp:TextBox ID="CantidadTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="CantidadTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="CantidadTextBox" runat="server" Width="190px" Height="33px" TextMode="Number"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="**" ValidationGroup="guardar" ControlToValidate="CantidadTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
                 </div>
                 <%-- Fecha --%>
                 <div class="text-center">
@@ -63,8 +64,8 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <asp:TextBox ID="PrecioTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="PrecioTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="PrecioTextBox" runat="server" Width="190px" Height="33px" TextMode="Number"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="**" ValidationGroup="guardar" ControlToValidate="PrecioTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
                 </div>
                 <%-- Fecha --%>
                 <div class="text-center">
@@ -74,7 +75,7 @@
                 </div>
                 <div class="text-center">
                     <asp:TextBox ID="FechaTextBox" runat="server" Width="190px" Height="33px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="**" ValidationGroup="buscar" ControlToValidate="FechaTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="**" ValidationGroup="guardar" ControlToValidate="FechaTextBox" Font-Bold="True" ForeColor="Black"></asp:RequiredFieldValidator>
                     <br />
                     <br />
                 </div>
@@ -86,8 +87,8 @@
 
 
                     <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" class="btn btn-Button4" OnClick="NuevoButton_Click" />
-                    <asp:Button ID="GuardarButton" runat="server" Text="Guardar" OnClick="GuardarButton_Click" class="btn btn-Button4" />
-                    <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" class="btn btn-Button4" OnClick="EliminarButton_Click" />
+                    <asp:Button ID="GuardarButton" runat="server" Text="Guardar" OnClick="GuardarButton_Click" class="btn btn-Button4" ValidationGroup="guardar" />
+                    <asp:Button ID="EliminarButton" runat="server" Text="Eliminar" class="btn btn-Button4" OnClick="EliminarButton_Click" ValidationGroup="eliminar" />
 
 
                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

@@ -33,7 +33,7 @@ namespace WebSistemaGonzalez.UI.Consultas
             {
                 if (FlitrarTextbox.Text == "")
                 {
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Debe de Insertar la descripcion');</script>");
+                    //Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Debe de Insertar la descripcion');</script>");
                 }
                 else
                 {
@@ -46,7 +46,7 @@ namespace WebSistemaGonzalez.UI.Consultas
             {
                 if (FlitrarTextbox.Text == "")
                 {
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Debe de Insertar el Monto');</script>");
+                    //Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Debe de Insertar el Monto');</script>");
                 }
                 else
                 {

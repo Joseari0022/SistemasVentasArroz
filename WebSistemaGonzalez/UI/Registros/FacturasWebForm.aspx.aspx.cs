@@ -106,7 +106,7 @@ namespace WebSistemaGonzalez.UI.Registros
                     factura = Llenar();
                     FacturaBll.Guardar(factura);
                     Utilidades.ShowToastr(this, "El Usuario", " Se Guardo Correctamente", "Success");
-                    //Limpiar();
+                    Limpiar();
 
                 }
             }
@@ -172,6 +172,17 @@ namespace WebSistemaGonzalez.UI.Registros
            
             total = Precio;
             TotalTextBox.Text = total.ToString();
+        }
+
+        private void Limpiar()
+        {
+            FacturaGridView.DataSource = null;
+            FacturaGridView.DataBind();
+        }
+
+        protected void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

@@ -21,8 +21,8 @@
                     </h5>
                     <dd>
                     <h5><span class="auto-style1">Desde</span>
-                        <asp:TextBox ID="DesdeTextBox" runat="server" Width="167px" Height="33px"></asp:TextBox>
-                        &nbsp;&nbsp;<span class="auto-style1">Hasta&nbsp;</span><asp:TextBox ID="HastaTextBox" runat="server" CssClass="auto-style1" Width="167px" Height="33px"></asp:TextBox>
+                        <asp:TextBox ID="DesdeTextBox" runat="server" Width="190px" Height="33px" TextMode="Date"></asp:TextBox>
+                        &nbsp;&nbsp;<span class="auto-style1">Hasta&nbsp;</span><asp:TextBox ID="HastaTextBox0" runat="server" Width="190px" Height="33px" TextMode="Date"></asp:TextBox>
                     &nbsp;<asp:Button ID="ImprimirButton0" runat="server" class="btn btn-Button4" OnClick="ImprimirButton_Click" Text="Imprimir" />
                     </h5>
             
