@@ -81,24 +81,24 @@ namespace BLL
             }
         }
 
-        public static List<Usuarios> ListarTodo()
-        {
-            List<Usuarios> retorno = null;
-            using (var conn = new Repositorio<Usuarios>())
-            {
-                try
-                {
-                    retorno = conn.ListaGet().ToList();
+        //public static List<Usuarios> ListarTodo()
+        //{
+        //    List<Usuarios> retorno = null;
+        //    using (var conn = new Repositorio<Usuarios>())
+        //    {
+        //        try
+        //        {
+        //            retorno = conn.ListaGet().ToList();
 
-                }
-                catch (Exception)
-                {
+        //        }
+        //        catch (Exception)
+        //        {
 
-                    throw;
-                }
-                return retorno;
-            }
-        }
+        //            throw;
+        //        }
+        //        return retorno;
+        //    }
+        //}
 
         public static List<Usuarios> GetListaNombre(string tmp)
         {

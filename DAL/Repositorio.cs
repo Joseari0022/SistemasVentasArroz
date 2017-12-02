@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class Repositorio<TEntity> : IRepository<TEntity> where TEntity : class
+    public class Repositorio<TEntity> : IRepositorio<TEntity> where TEntity : class
     {
         SistemaVentasDb Contex = null;
         public Repositorio()
@@ -21,18 +21,6 @@ namespace DAL
             get
             {
                 return Contex.Set<TEntity>();
-            }
-        }
-
-        public TEntity Buscar(Expression<Func<TEntity, bool>> Busqueda)
-        {
-            try
-            {
-                return EntitySet.FirstOrDefault(Busqueda);
-            }
-            catch (Exception)
-            {
-                throw;
             }
         }
 
@@ -51,6 +39,20 @@ namespace DAL
 
             return false;
         }
+
+        public TEntity Buscar(Expression<Func<TEntity, bool>> Busqueda)
+        {
+            try
+            {
+                return EntitySet.FirstOrDefault(Busqueda);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+       
 
         public bool Modificar(TEntity Entidad)
         {
@@ -121,10 +123,9 @@ namespace DAL
                 Contex.Dispose();
         }
 
-        TEntity IRepository<TEntity>.Guardar(TEntity Entidad)
+        TEntity IRepositorio<TEntity>.Guardar(TEntity Entidad)
         {
             throw new NotImplementedException();
         }
-
     }
 }

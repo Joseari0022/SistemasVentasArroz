@@ -12,27 +12,86 @@ namespace BLL
 {
     public class FacturaBll
     {
-        public static bool Guardar(Facturas factura)
+        //public static bool Guardar(Facturas factura)
+        //{
+        //    using (var reposi = new Repositorio<Facturas>())
+        //    {
+        //        try
+        //        {
+        //            if (Buscar(f => f.IdFactura == factura.IdFactura) == null)
+        //            {
+        //                return reposi.Guardar(factura);
+        //            }
+        //            else
+        //            {
+        //                return reposi.Modificar(factura);
+        //            }
+        //        }
+        //        catch (Exception)
+        //        {
+        //            throw;
+        //        }
+        //    }
+        //}
+
+        public static  bool Guardar(Entidades.Facturas Facturag, List<Entidades.FacturasProductos> listaRelaciones)
         {
-            using (var reposi = new Repositorio<Facturas>())
+            using (var repositorio = new Repositorio<Facturas>())
             {
-                try
+                bool FacuraGuardada;
+                bool relacionesGuardadas = false;
+                if (Buscar(P => P.IdFactura == Facturag.IdFactura) == null)
                 {
-                    if (Buscar(f => f.IdFactura == factura.IdFactura) == null)
-                    {
-                        return reposi.Guardar(factura);
-                    }
-                    else
-                    {
-                        return reposi.Modificar(factura);
-                    }
+                    FacuraGuardada = repositorio.Guardar(Facturag);
                 }
-                catch (Exception)
+                else
                 {
-                    throw;
+                    FacuraGuardada = repositorio.Modificar(Facturag);
                 }
+                if (FacuraGuardada)
+                {
+                    relacionesGuardadas = true;
+                    if (listaRelaciones != null)
+                    {
+
+                        foreach (var relacion in listaRelaciones)
+                        {
+                            relacion.IdFactura = Facturag.IdFactura;
+                            if (!BLL.FacturasProductosBLL.Guardar(relacion))
+                            {
+                                relacionesGuardadas = false;
+
+                            }
+                        }
+                    }
+
+                }
+                return relacionesGuardadas;
             }
         }
+
+        //public static bool Guardar(Facturas facturas)
+        //{
+        //    using (var context = new Repositorio<Facturas>())
+        //    {
+        //        try
+        //        {
+        //            if (Buscar(p => p.IdFactura == facturas.IdFactura) == null)
+        //            {
+        //                return context.Guardar(facturas);
+        //            }
+        //            else
+        //            {
+        //                return context.Modificar(facturas);
+        //            }
+        //        }
+        //        catch (Exception)
+        //        {
+
+        //            throw;
+        //        }
+        //    }
+        //}
 
         //public static bool Guardar(Facturas gr)
         //{

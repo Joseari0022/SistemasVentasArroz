@@ -14,21 +14,24 @@ namespace Entidades
         public string TipoPago { get; set; }
         public string NombreCliente { get; set; }
         public DateTime FechaCreacion { get; set; }
-        public float SubTotal { get; set; }
-        public float Total { get; set; }
+        public int SubTotal { get; set; }
+        public int Total { get; set; }
 
-        public virtual List<Productos> producto { get; set; }
+        public List<Productos> Detalle;
+        public virtual ICollection<FacturasProductos> Relacion { get; set; }
         public Facturas()
         {
-            this.producto = new List<Productos>();
+            this.Relacion = new HashSet<FacturasProductos>();
         }
 
-        public Facturas(int idfactura, string tipopago, string nombrecliente)
+        public Facturas(DateTime fecha, int subtotal, int total,  string nombrecliente, int idfactura, string tipopago)
         {
-            this.IdFactura = idfactura;
-            this.TipoPago = tipopago;
+            this.FechaCreacion = fecha;
+            this.SubTotal = subtotal;
+            this.Total = total;
             this.NombreCliente = nombrecliente;
-            this.producto = new List<Productos>();
+            this.IdFactura = idfactura;
+            this.TipoPago = tipopago; 
         }
     }
 }

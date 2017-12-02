@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Clientes.cs" />
     <Compile Include="Facturas.cs" />
+    <Compile Include="FacturasProductos.cs" />
     <Compile Include="Productos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuarios.cs" />

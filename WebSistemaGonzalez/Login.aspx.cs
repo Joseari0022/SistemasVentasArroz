@@ -49,16 +49,16 @@ namespace WebSistemaGonzalez
             //{
             //    Utilidades.ShowToastr(this, "Usuario", "Incorrecto", "warning");
             //}
-            Usuarios user = new Usuarios();
-            user = UsuariosBll.Buscar(p => p.NombresUsuarios == NombreTextBox.Text);
+            Usuarios usuario = new Usuarios();
+            usuario = UsuariosBll.Buscar(p => p.NombresUsuarios == NombreTextBox.Text);
             //usuarioLabel = user;
 
-            if (user != null)
+            if (usuario != null)
             {
-                if (user.Contrasena == ContrasenaTextBox.Text)
+                if (usuario.Contrasena == ContrasenaTextBox.Text)
                 {
 
-                    FormsAuthentication.RedirectFromLoginPage(user.NombresUsuarios, true);
+                    FormsAuthentication.RedirectFromLoginPage(NombreTextBox.Text, true);
 
                 }
                 else
@@ -66,9 +66,6 @@ namespace WebSistemaGonzalez
                     Utilidades.ShowToastr(this, "No coinciden", "Volverlo a intentar", "warning");
 
                     //Limpiar();
-
-
-
                 }
             }
             else

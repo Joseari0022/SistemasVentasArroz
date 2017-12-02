@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="ClientesBll.cs" />
     <Compile Include="FacturaBll.cs" />
+    <Compile Include="FacturasProductosBLL.cs" />
     <Compile Include="ProductosBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuariosBll.cs" />
