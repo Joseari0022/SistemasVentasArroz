@@ -176,7 +176,7 @@ namespace WebSistemaGonzalez.UI.Registros
             facturas.NombreCliente = ClienteDropDownList.SelectedValue.ToString();
             facturas.FechaCreacion = Convert.ToDateTime(FechaTextBox.Text);
             //facturas.SubTotal = SubTotalTextBox.ToString();
-            facturas.Total = Convert.ToInt32(TotalTextBox.Text;
+            facturas.Total = Convert.ToInt32(TotalTextBox.Text);
     
         }
 
